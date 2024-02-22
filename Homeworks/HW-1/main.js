@@ -62,12 +62,9 @@ console.log(p, typeof p);
 //   По-Батькові та роками. та вивести в консоль
 
 console.log(symbol);
-let firstName2 = 'Edwin'
-let middleName2 = 'Stepanovych'
-let year = '1994'
-prompt(firstName2);
-prompt(middleName2);
-prompt(year);
+let firstName2 = prompt('Name')
+let middleName2 = prompt('middleName')
+let year = prompt('year')
 console.log(firstName2);
 console.log(middleName2);
 console.log(year);

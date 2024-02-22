@@ -1,0 +1,51 @@
+            Lesson - 1 - {vars_types_cats}
+ *** Script
+ *** Variables/Types
+ *** Base/Data/Types
+ *** Strings variants and operations
+ *** Numbers and operations
+ *** Boolean
+ *** Types convert
+ *** Type checking and other types
+
+            Lesson - 2
+ ***
+
+            Lesson - 3
+ ***
+
+            Lesson - 4
+
+ ***
+
+            Lesson - 5
+ ***
+
+            Lesson - 6
+ ***
+
+            Lesson - 7
+ ***
+
+            Lesson - 8
+ ***
+
+            Lesson - 9
+ ***
+
+            Lesson - 10
+ ***
+
+            Lesson - 11
+ ***
+
+            Lesson - 12
+ ***
+
+            Lesson - 13
+ ***
+
+
+
+            Link to Git
+ /// https://github.com/dianaklr/HTML_January_2024/tree/master ///

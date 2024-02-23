@@ -78,10 +78,12 @@
  8 *** .Await
  9 *** .Demo fetch
 
-            Lesson - 12
- ***
+            Lesson - 12 - { url_http_regexp }
+ 1 *** .URL
+ 2 *** .HTTP Methods
+ 3 *** .Regexp
 
-            Lesson - 13
+            Lesson - 13 - { useful }
  ***
 
 

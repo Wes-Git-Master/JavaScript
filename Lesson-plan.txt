@@ -1,15 +1,23 @@
             Lesson - 1 - {vars_types_cats}
- *** Script
- *** Variables/Types
- *** Base/Data/Types
- *** Strings variants and operations
- *** Numbers and operations
- *** Boolean
- *** Types convert
- *** Type checking and other types
+ 1*** Script
+ 2*** Variables/Types
+ 3*** Base/Data/Types
+ 4*** Strings variants and operations
+ 5*** Numbers and operations
+ 6*** Boolean
+ 7*** Types convert
+ 8*** Type checking and other types
 
-            Lesson - 2
- ***
+            Lesson - 2 - {arrays_objects_if}
+ 1*** Arrays base
+ 2*** Array in array
+ 3*** Objects create
+ 4*** Embedded objs
+ 5*** Array of objs
+ 6*** Add fields to objs
+ 7*** Refs vs primitives
+ 8*** If
+ 9*** Switch
 
             Lesson - 3
  ***

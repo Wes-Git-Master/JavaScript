@@ -50,7 +50,7 @@
  5 *** .Spread
  6 *** .Shallow and deep copy JSON
 
-            Lesson - 8
+            Lesson - 8 - {}
  ***
 
             Lesson - 9

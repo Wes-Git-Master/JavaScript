@@ -62,8 +62,10 @@
  3 *** .DOM create
  4 *** .Recursion (Additional)
 
-            Lesson - 10
- ***
+            Lesson - 10 - { events_ls }
+ 1 *** .Forms API
+ 2 *** .Events
+ 3 *** .Localstorage
 
             Lesson - 11
  ***

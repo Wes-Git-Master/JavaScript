@@ -50,8 +50,11 @@
  5 *** .Spread
  6 *** .Shallow and deep copy JSON
 
-            Lesson - 8 - {}
- ***
+            Lesson - 8 - { constructors_class }
+ 1 *** .Constructors
+ 2 *** .Call apply bind prototype
+ 3 *** .Proto
+ 4 *** .Class
 
             Lesson - 9
  ***

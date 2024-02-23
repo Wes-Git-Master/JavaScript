@@ -67,8 +67,16 @@
  2 *** .Events
  3 *** .Localstorage
 
-            Lesson - 11
- ***
+            Lesson - 11 - { async_fetch }
+ 1 *** .Sync vs async & event loop
+ 2 *** .Promises resolve
+ 3 *** .Promises reject
+ 4 *** .Promise status
+ 5 *** .API
+ 6 *** .Fetch
+ 7 *** .Promise all race
+ 8 *** .Await
+ 9 *** .Demo fetch
 
             Lesson - 12
  ***

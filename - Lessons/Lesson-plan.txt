@@ -56,8 +56,11 @@
  3 *** .Proto
  4 *** .Class
 
-            Lesson - 9
- ***
+            Lesson - 9 - { dom }
+ 1 *** .Search
+ 2 *** .DOM object manipulation
+ 3 *** .DOM create
+ 4 *** .Recursion (Additional)
 
             Lesson - 10
  ***

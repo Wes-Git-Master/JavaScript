@@ -84,7 +84,13 @@
  3 *** .Regexp
 
             Lesson - 13 - { useful }
- ***
+ 1 *** .Closures
+ 2 *** .Recursion
+ 3 *** .Custom  callbacks
+ 4 *** .Descriptors
+ 5 *** .Set
+ 6 *** .Map
+ 7 *** .Generator
 
 
 

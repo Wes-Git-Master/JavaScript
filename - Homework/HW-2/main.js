@@ -167,10 +167,34 @@ switch (week) {
 //      Потрібно знайти та вивести максимальне число з тих двох .
 //      Також потрібно врахувати коли введені рівні числа.
 
+console.log(symbol);
+let user = [50, 50];
+let n1 = user[0];
+let n2 = user[1];
+if (n1 > n2) {
+    console.log(n1);
+} else if (n2 > n1) {
+    console.log(n2);
+} else {
+    console.log('the numbers are the same')
+}
 
 // - Є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //      за допомоги  оператора || буде присвоювати змінній х значення "default"
 //      якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
+
+console.log(symbol);
+let x2 = false
+console.log(typeof x2);
+if (x2 === false || +false) {
+    x2 = "default"
+    console.log(x2);
+} else if (x2 === (typeof '') || (typeof +'')) {
+    console.log(x2);
+}
+
 // - З файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray.
 //      За допомоги іф перевірити кожен його елемент на тривалість навчання.
 //      У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
+
+console.log(symbol);

@@ -39,19 +39,19 @@ let book4 = {
     title: 'some book 1',
     pageCount: 303,
     genre: 'fantasy',
-    authors: {name: 'iryna', age: 20},
+    authors: [{name: 'iryna', age: 20}],
 };
 let book5 = {
     title: 'some book 2',
     pageCount: 404,
     genre: 'mystery',
-    authors: {name: 'petya', age: 30},
+    authors: [{name: 'petya', age: 30}],
 };
 let book6 = {
     title: 'some book 3',
     pageCount: 505,
     genre: 'adventure',
-    authors: {name: 'maxim', age: 40},
+    authors: [{name: 'maxim', age: 40}],
 };
 
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password.
@@ -101,7 +101,7 @@ if (a === x) {
 //      (в першу, другу, третю или четверту частину години).
 
 console.log(symbol);
-let time = +''
+let time = 0
 if (time > 0 && time < 16) {
     console.log('в першу частину')
 }
@@ -120,7 +120,7 @@ if (time > 45 && time < 60) {
 //      Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
 
 console.log(symbol);
-let day = +''
+let day = +'0'
 if (day > 0 && day < 11) {
     console.log('в першу')
 }
@@ -135,12 +135,39 @@ if (day > 20 && day < 32) {
 //      Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день
 //      (можна замість плану на день, назву дня англійською).
 
-
+console.log(symbol);
+let week = 0
+switch (week) {
+    case 1:
+        console.log('Monday');
+        break;
+    case 2:
+        console.log('Tuesday');
+        break;
+    case 3:
+        console.log('Wednesday');
+        break;
+    case 4:
+        console.log('Thursday');
+        break;
+    case 5:
+        console.log('Friday');
+        break;
+    case 6:
+        console.log('Saturday');
+        break;
+    case 7:
+        console.log('Sunday');
+        break;
+    default:
+        console.log('enter the day of the week');
+}
 
 // - Користувач вводить або має два числа.
 //      Потрібно знайти та вивести максимальне число з тих двох .
 //      Також потрібно врахувати коли введені рівні числа.
-//
+
+
 // - Є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //      за допомоги  оператора || буде присвоювати змінній х значення "default"
 //      якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)

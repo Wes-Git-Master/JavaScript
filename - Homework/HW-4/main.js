@@ -123,6 +123,7 @@ build5(users2);
 
 // - створити функцію яка повертає найменьше число з масиву
 let arr3 = [100, -18, 3, 4, 5, 10, -150, 500]
+
 // debugger;
 function minNumber() {
     let minNum = 0
@@ -142,7 +143,8 @@ minNumber(arr3);
 
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 // debugger;
-let arr4 = [1,2,10]
+let arr4 = [1, 2, 10]
+
 function sum() {
     let result = 0
     let sum = 0
@@ -152,17 +154,23 @@ function sum() {
         }
         sum = argument + sum
     }
-    console.log('sum =',sum)
+    console.log('sum =', sum)
     return sum
 }
+
 sum(arr4)
 
-// - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
+// - створити функцію swap(arr,index1,index2). Функція міняє місцями заначення у відповідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 
+function swap(arr, index1, index2) {
+    for (let i = 0; i < 1; i++) {
+        const arrElement = arr[i];
+    }
+    return arr
+}
 
-
-
+console.log((swap([11, 22, 33, 44], 0, 1)));
 
 
 

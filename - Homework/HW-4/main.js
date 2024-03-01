@@ -119,11 +119,9 @@ function build5() {
     }
 }
 
-build5(users2)
+build5(users2);
 
 // - створити функцію яка повертає найменьше число з масиву
-let arr3 = [100, -18, 3, 4, 5, 10, -200, 500, 600];
-
 function minNumber() {
     let minNum = arguments[0]
     let maxNum = arguments[0]
@@ -138,9 +136,23 @@ function minNumber() {
     return minNum
 }
 
-minNumber(100, -18, 3, 4, 5, 10, -200, 500, 600)
+minNumber(100, -18, 3, 4, 5, 10, -100, 500,);
 
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
+debugger;
+function sum() {
+    let result = 0
+    let sum = 0
+    for (const argument of arguments) {
+        if (argument > 0) {
+            result = argument
+        }
+        sum = argument + sum
+    }
+    return sum
+}
+
+console.log((sum(1, 2, 10,10)));
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)

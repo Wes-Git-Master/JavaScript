@@ -191,8 +191,9 @@ function exchange(sumUAH, currencyValues, exchangeCurrency) {
     let sum = sumUAH //10.000//
     let currencyUSD = currencyValues[0].value // 40 //
     let currencyEUR = currencyValues[1].value // 42 //
-    let resultUSD = exchangeCurrency // USD //
-    let resultEUR = exchangeCurrency // EUR //
+    let result = exchangeCurrency // USD //
+
+
 
 
 

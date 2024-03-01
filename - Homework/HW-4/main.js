@@ -154,14 +154,34 @@ function sum() {
         }
         sum = argument + sum
     }
-    console.log('sum =', sum)
+    console.log('sum =', sum);
     return sum
 }
 
-sum(arr4)
+sum(arr4);
 
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заначення у відповідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+// debugger
+function swap(arr, index1, index2) {
+    if (index1 === 0 && index2 === 1) {
+        console.log('index: 0 - index: 1');
+        return arr
+    }
+    if (index1 === 1 && index2 === 0) {
+        console.log('------------')
+        console.log('index: 1 - index: 0');
+        for (const arrElement of arr) {
+            if (arrElement < arr[1]) {
+                arr[0] = arr[1]
+                arr[1] = arrElement
+            }
+        }
+        return arr
+    }
+}
 
+console.log(swap([11, 22, 33, 44], 1, 0));
+console.log('------------');
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250

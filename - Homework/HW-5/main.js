@@ -133,23 +133,6 @@ function foo10() {
 
 foo10(arrNumbers)
 
-// debugger;
-// function minNumber() {
-//     let minNum = 0
-//     let maxNum = 0
-//     for (const argument of arguments[0]) {
-//         if (argument < minNum) {
-//             minNum = argument
-//         } else if (argument > maxNum) {
-//             maxNum = argument
-//         }
-//     }
-//     console.log('min', minNum)
-//     return minNum
-// }
-//
-// minNumber(arrNumbers);
-
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]

@@ -136,10 +136,62 @@ foo10(arrNumbers)
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його.
 //   Приклад sum([1,2,10]) //->13
 
+let arrNumbers2 = [1, 2, 10, 0]
+
+function foo11() {
+    const f = () => {
+        let result = 0
+        let sum = 0
+        for (const argument of arguments[0]) {
+            if (argument > 0) {
+                result = argument
+            }
+            sum = argument + sum
+        }
+        console.log('sum =', sum);
+    }
+    f();
+}
+
+foo11(arrNumbers2)
 
 
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+
+
+const foo12 = (arr, index1, index2) => {
+    if (index1 === 0 && index2 === 1) {
+        return arr
+    }
+    if (index1 === 1 && index2 === 0) {
+        for (const arrElement of arr) {
+            if (arrElement < arr[1]) {
+                arr[0] = arr[1]
+                arr[1] = arrElement
+            }
+        }
+        return arr
+    } else {
+        console.log('Input value is not correct')
+    }
+}
+console.log(foo12([11, 22, 33, 44], 1, 0));
+
+
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
-//
+
+const foo13 = (sumUAH, currencyValues, exchangeCurrency) => {
+    let sum = sumUAH
+    let currencyUSD = currencyValues[0].value
+    let result = exchangeCurrency // USD //
+    for (const Curr of exchangeCurrency) {
+        if (exchangeCurrency === 'USD') {
+            result = sum / currencyUSD
+            return result
+        }
+    }
+}
+
+console.log('USD =>', foo13(10000, [{currency: 'USD', value: 40}, {currency: 'EUR', value: 42}], 'USD'));

@@ -1,33 +1,32 @@
 *** // A string is both a primitive and a reference data type // ***
 
 *** Strings methods ***
- - let 'str' .concat '!!!'          <--- <= hello okten => hello okten!!!
- - let 'str' .toUpperCase()         <--- => hello okten => HELLO OKTEN
- - let 'str' .toLowerCase()         <--- => HELLO OKTEN => hello okten
- - let 'str' .startsWith (hel...)   <--- <= hello okten => hell... => true || false
- - let 'str' .endsWith ('...lo')    <--- => hello okten => ....ten => true || false
- - let 'str' .substring(0,7)        <--- <= hello okten => hello o
- - let 'str' .indexOf('o')          <--- => hello okten => 4 - (index of string from left to right)
- - let 'str' .lastIndexOf('o')      <--- <= hello okten => 6 - (index of string from right to left)
- - let 'str' .indexOf('o',5)        <--- => hello okten => 6 - (index of string from left to right + position)
- - let 'str' .charAt(8)             <--- <= hello okten => t
- - let 'str' .replace('e,'!')       <--- => hello okten => h!llo okten - (replacing only the first entry)
- - let 'str' .replaceAll('e,'!')    <--- <= hello okten => h!llo okten - (replacing All)
- - let 'str' .split(' ')            <--- => hello okten => [hello okten] (distribution into array elements)
+ - let 'str' .concat ---------> '!!!'     // ---> => hello okten => hello okten!!!
+ - let 'str' .toUpperCase ----> ()        // ---> <= hello okten => HELLO OKTEN
+ - let 'str' .toLowerCase ----> ()        // ---> => HELLO OKTEN => hello okten
+ - let 'str' .startsWith -----> (hel...)  // ---> <= hello okten => true || false
+ - let 'str' .endsWith ------> ('...ten') // ---> => hello okten => true || false
+ - let 'str' .substring ------> (0,7)     // ---> <= hello okten => hello o
+ - let 'str' .indexOf --------> ('o')     // ---> => hello okten => 4 - (index of string from left to right)
+ - let 'str' .lastIndexOf ----> ('o')     // ---> <= hello okten => 6 - (index of string from right to left)
+ - let 'str' .indexOf --------> ('o',5)   // ---> => hello okten => 6 - (index of string from left to right + position)
+ - let 'str' .charAt ---------> (8)       // ---> <= hello okten => t
+ - let 'str' .replace --------> ('e,'!')  // ---> => hello okten => h!llo okten - (replacing only the first entry)
+ - let 'str' .replaceAll -----> ('e,'!')  // ---> <= hello okten => h!llo okten - (replacing All)
+ - let 'str' .split ----------> (' ')     // ---> => hello okten => [hello okten] (distribution into array elements)
 
 *** Array functions ***
- -    <--- <=
- -    <--- =>
- -    <--- =>
- -    <--- <=
- -    <--- =>
- -    <--- <=
- -    <--- =>
- -    <--- <=
- -    <--- =>
- -    <--- <=
- -    <--- =>
- -    <--- <=
- -    <--- =>
-
-
+ - let [arr] .push ---------> ('new element')     // ---> => 'new element'                                        adding a new element to the array
+ - let [arr] .pop ----> ()        // ---> <=
+ - let [arr] . ----> ()        // ---> =>
+ - let [arr] . ----> ()        // ---> <=
+ - let [arr] . ----> ()        // ---> =>
+ - let [arr] . ----> ()        // ---> <=
+ - let [arr] . ----> ()        // ---> =>
+ - let [arr] . ----> ()        // ---> <=
+ - let [arr] . ----> ()        // ---> =>
+ - let [arr] . ----> ()        // ---> <=
+ - let [arr] . ----> ()        // ---> =>
+ - let [arr] . ----> ()        // ---> <=
+ - let [arr] . ----> ()        // ---> =>
+ - let [arr] . ----> ()        // ---> <=

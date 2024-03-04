@@ -28,20 +28,13 @@
  - let [arr] .indexOf ------> (11)                // ---> <= - searching for the index of an element by the name of the element
  - let [arr] .includes -----> (11)                // ---> => - check for the presence of an element in the array
 
-
-
-
-
-
-
-
-
-
-
-
+*** Array callback functions ***
+              Name of method:
  - let [arr] . ----> ()                           // ---> <=
  - let [arr] . ----> ()                           // ---> =>
  - let [arr] . ----> ()                           // ---> <=
+
+
 
 
 

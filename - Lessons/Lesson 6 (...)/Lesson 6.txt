@@ -15,4 +15,19 @@
  - let 'str' .replaceAll('e,'!')    <--- <= hello okten => h!llo okten - (replacing All)
  - let 'str' .split(' ')            <--- => hello okten => [hello okten] (distribution into array elements)
 
+*** Array functions ***
+ -    <--- <=
+ -    <--- =>
+ -    <--- =>
+ -    <--- <=
+ -    <--- =>
+ -    <--- <=
+ -    <--- =>
+ -    <--- <=
+ -    <--- =>
+ -    <--- <=
+ -    <--- =>
+ -    <--- <=
+ -    <--- =>
+
 

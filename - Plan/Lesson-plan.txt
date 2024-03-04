@@ -1,0 +1,98 @@
+            Lesson - 1 - { vars_types_cats }
+ 1 *** .Script
+ 2 *** .Variables/Types
+ 3 *** .Base/Data/Types
+ 4 *** .Strings variants and operations
+ 5 *** .Numbers and operations
+ 6 *** .Boolean
+ 7 *** .Types convert
+ 8 *** .Type checking and other types
+
+            Lesson - 2 - { arrays_objects_if }
+ 1 *** .Arrays base
+ 2 *** .Array in array
+ 3 *** .Objects create
+ 4 *** .Embedded objs
+ 5 *** .Array of objs
+ 6 *** .Add fields to objs
+ 7 *** .Refs vs primitives
+ 8 *** .If
+ 9 *** .Switch
+
+            Lesson - 3 - { loops }
+ 1 *** .Increments
+ 2 *** .For loop
+ 3 *** .For of
+ 4 *** .For in
+ 5 *** .While
+
+            Lesson - 4 - { functions_part_1 }
+ 1 *** .Functions base
+ 2 *** .Return
+ 3 *** .Arguments
+ 4 *** .Rest args
+
+            Lesson - 5 - { functions_part_2 }
+ 1 *** .Fn expression
+ 2 *** .Arrow fn
+ 3 *** .Functions in objects
+
+            Lesson - 6 - { array_functions }
+ 1 *** .String functions
+ 2 *** .Array functions
+ 3 *** .Array callback functions
+
+            Lesson - 7 - { try_es6 }
+ 1 *** .Date
+ 2 *** .Try catch
+ 3 *** .Optional Chain Operator
+ 4 *** .ES6 Objects
+ 5 *** .Spread
+ 6 *** .Shallow and deep copy JSON
+
+            Lesson - 8 - { constructors_class }
+ 1 *** .Constructors
+ 2 *** .Call apply bind prototype
+ 3 *** .Proto
+ 4 *** .Class
+
+            Lesson - 9 - { dom }
+ 1 *** .Search
+ 2 *** .DOM object manipulation
+ 3 *** .DOM create
+ 4 *** .Recursion (Additional)
+
+            Lesson - 10 - { events_ls }
+ 1 *** .Forms API
+ 2 *** .Events
+ 3 *** .Localstorage
+
+            Lesson - 11 - { async_fetch }
+ 1 *** .Sync vs async & event loop
+ 2 *** .Promises resolve
+ 3 *** .Promises reject
+ 4 *** .Promise status
+ 5 *** .API
+ 6 *** .Fetch
+ 7 *** .Promise all race
+ 8 *** .Await
+ 9 *** .Demo fetch
+
+            Lesson - 12 - { url_http_regexp }
+ 1 *** .URL
+ 2 *** .HTTP Methods
+ 3 *** .Regexp
+
+            Lesson - 13 - { useful }
+ 1 *** .Closures
+ 2 *** .Recursion
+ 3 *** .Custom  callbacks
+ 4 *** .Descriptors
+ 5 *** .Set
+ 6 *** .Map
+ 7 *** .Generator
+
+
+
+            Link to Git
+ /// https://github.com/GrayHead/js_demos/tree/master/js/2023%20plan ///

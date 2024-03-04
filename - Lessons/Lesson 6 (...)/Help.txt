@@ -3,9 +3,13 @@
 *** Strings methods ***
  - let 'str' .concat '!!!'         => hello okten => hello okten!!!
  - let 'str' .toUpperCase()        => hello okten => HELLO OKTEN
- - let 'str' .toLowerCase()        => HELLO OKTEN => HELLO OKTEN
- - let 'str' .startsWith (hel...)  => hello okten => hel... => true
- - let 'str' .endsWith ('...lo')   => hello okten => ....en => true
- - let 'str' .substring(0,7)       =>
- - let 'str' .indexOf('h')         =>
+ - let 'str' .toLowerCase()        => HELLO OKTEN => hello okten
+ - let 'str' .startsWith (hel...)  => hello okten => hell... => true
+ - let 'str' .endsWith ('...lo')   => hello okten => ....ten => true
+ - let 'str' .substring(0,7)       => hello okten => hello o
+ - let 'str' .indexOf('o')         => hello okten => 4 (index of string from left to right)
+ - let 'str' .lastIndexOf('o')     => hello okten => 6 (index of string from right to left)
+ - let 'str' .indexOf('o',5)       => hello okten => 6 (index of string from left to right + position)
+
+
 

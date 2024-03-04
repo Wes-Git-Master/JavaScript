@@ -1,3 +1,11 @@
 *** // A string is both a primitive and a reference data type // ***
+
 *** Strings methods ***
- - 'str'{.concat}
+ - let 'str' .concat '!!!'         => hello okten => hello okten!!!
+ - let 'str' .toUpperCase()        => hello okten => HELLO OKTEN
+ - let 'str' .toLowerCase()        => HELLO OKTEN => HELLO OKTEN
+ - let 'str' .startsWith (hel...)  => hello okten => hel... => true
+ - let 'str' .endsWith ('...lo')   => hello okten => ....en => true
+ - let 'str' .substring(0,7)       =>
+ - let 'str' .indexOf('h')         =>
+

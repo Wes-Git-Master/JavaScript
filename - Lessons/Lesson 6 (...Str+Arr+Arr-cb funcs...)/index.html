@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    /*
+    // let s1 = 'asdasd'; // prim
+    // let s2 = new String('jsahgdhgsad'); // ref
+    // s1.toUpperCase(); // ref
+
+    let str1 = 'okten hello';
+    // console.log(str1[3]);
+    // for (const str1Element of str1) {
+    //     console.log(str1Element);
+    // }
+
+
+    let toUpperCase = str1.toUpperCase();
+    console.log(toUpperCase, str1);
+    console.log(toUpperCase.toLowerCase());
+    console.log(str1.startsWith('ten', 2));
+    console.log(str1.endsWith('ll'));
+    console.log(str1.substring(1, str1.length - 3));
+
+    console.log(str1.indexOf('o', 1));
+    console.log(str1.charAt(0));
+
+    let sss = '====+380671231212===';
+    // console.log(
+    //     sss
+    //         .substring(
+    //             sss.indexOf('=')+1, // 0+1
+    //             sss.lastIndexOf('=') // 14
+    //         )
+    // );
+
+    // console.log(sss.replaceAll('=', ''));
+
+    // let objStr = 'vasya 31 male';
+    //
+    // function adapter(objStr) {
+    //     let split = objStr.split(' ');
+    //     return {
+    //         name: split[0],
+    //         age: split[1],
+    //         gender: split[2]
+    //     }
+    // }
+    //
+    // console.log(adapter(objStr));
+    //
+    // let objStr2 = 'kokos 36 female';
+    // console.log(adapter(objStr2));*/
+
+
+    // let arr = [];
+    //
+    // console.log(Array.isArray(arr), typeof arr);
+    // // arr[arr.length] = 'asd' ;
+    // // arr[arr.length] = 'qwe' ;
+    // arr.push('asd');
+    // arr.push('qwe');
+    // arr.unshift('xxx');
+    // console.log(arr);
+    // let pop = arr.pop();
+    // console.log(pop);
+    // console.log(arr);
+    // let shift = arr.shift();
+    // console.log(arr);
+    // console.log(shift);
+
+
+    // let numbers = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+    //
+    // // let splice = numbers.splice(2, 1); // delete
+    // let splice = numbers.splice(2, 1, 'asd'); // replace
+    // console.log(numbers);
+    // console.log(splice);
+    //
+    // let nums = [111, 222, 333];
+    // let newArray = numbers.concat(nums);
+    // console.log(newArray);
+    // // console.log('asd'.includes('s'));
+    // console.log(newArray.join('.'));
+    // console.log(newArray.reverse());
+    /*
+
+        // let users = [
+        //     {name: 'vasya', age: 31, status: false},
+        //     {name: 'petya', age: 30, status: true},
+        //     {name: 'kolya', age: 29, status: true},
+        //     {name: 'Olya', age: 28, status: false},
+        //     {name: 'max', age: 30, status: true},
+        //     {name: 'anya', age: 31, status: false},
+        //     {name: 'oleg', age: 28, status: false},
+        //     {name: 'andrey', age: 29, status: true},
+        //     {name: 'masha', age: 30, status: true},
+        //     {name: 'olya', age: 31, status: false},
+        //     {name: 'max', age: 31, status: true}
+        // ];
+
+
+        // users.forEach(item => console.log(item));
+
+
+        // let filter = users.filter((user) => !user.status && user.age > 30);
+        // console.log(filter);
+
+        // let map = users.map((user) => ({imya: user.name, vik: user.age}));
+        // console.log(map);
+        //
+        // let map = users.map((user, index) => ({name: user.name, age: user.age, status: user.status, id: index + 1}));
+
+
+        // let map = users.map((user, index) => {
+        //     user.id = index + 1;
+        //     return user;
+        // });
+        //
+        //
+        // console.log(map);
+        // console.log(users);
+
+
+        // let sort = users.sort((firstObj, neighbor) => {
+        //     return neighbor.age - firstObj.age; // +
+        //
+        // });
+        //
+        // console.log(sort);
+
+        // console.log(users.sort((a, b) => a.name.localeCompare(b.name)));
+        // console.log(users.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())));
+
+    */
+
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'Olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+
+    let reduce = users.reduce(
+        (accumulator, user) => {
+
+
+            if (user.status) {
+                accumulator[0].push(user);
+            } else {
+                accumulator[1].push(user);
+            }
+            return accumulator;
+
+        },
+        [[], []]
+    );
+
+    let reduceElement = reduce[0];
+    console.log(reduceElement);
+    let reduceElement1 = reduce[1];
+    console.log(reduceElement1);
+
+
+
+
+</script>
+</body>
+</html>

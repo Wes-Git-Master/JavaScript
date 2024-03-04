@@ -16,17 +16,17 @@
 
 *** Array functions ***
               Name of method:
- - let [arr] .push ---------> ('new element')     // ---> => - adding a new element to the array
- - let [arr] .pop ----------> ()                  // ---> <= - cut element from array
- - let [arr] .unshift ------> ('new element')     // ---> => - adding a new element to the beginning of the array
- - let [arr] .shift --------> ()                  // ---> <= - removing an element from the beginning of the array
- - let [arr] .join ---------> (',')               // ---> => - connecting elements with each other with a symbol
- - let [arr] .concat -------> (arr2)              // ---> <= - connection of two arrays
- - let [arr] .revers -------> ()                  // ---> => - reverse array elements
- - let [arr] .slice --------> (0,4)               // ---> <= - cutting array elements by index
- - let [arr] .splice -------> (0,2,'!!!')         // ---> => - removing an element from a specific position
- - let [arr] .indexOf ------> (11)                // ---> <= - searching for the index of an element by the name of the element
- - let [arr] .includes -----> (11)                // ---> => - check for the presence of an element in the array
+ - let [arr] .push ---------> ('new element') // ---> => - adding a new element to the array
+ - let [arr] .pop ----------> ()              // ---> <= - cut element from array
+ - let [arr] .unshift ------> ('new element') // ---> => - adding a new element to the beginning of the array
+ - let [arr] .shift --------> ()              // ---> <= - removing an element from the beginning of the array
+ - let [arr] .join ---------> (',')           // ---> => - connecting elements with each other with a symbol
+ - let [arr] .concat -------> (arr2)          // ---> <= - connection of two arrays
+ - let [arr] .revers -------> ()              // ---> => - reverse array elements
+ - let [arr] .slice --------> (0,4)           // ---> <= - cutting array elements by index
+ - let [arr] .splice -------> (0,2,'!!!')     // ---> => - removing an element from a specific position
+ - let [arr] .indexOf ------> (11)            // ---> <= - searching for the index of an element by the name of the element
+ - let [arr] .includes -----> (11)            // ---> => - check for the presence of an element in the array
 
 *** Array callback functions ***
               Name of method:
@@ -37,12 +37,7 @@
  - let [users] .every ------> (function(value,index,array){}()) // ---> <= - checking an array for a boolean value - false
  - let [users] .some -------> (function(value,index,array){}()) // ---> => - checking an array for a boolean value + true
  - let [users] .sort -------> (function(a,b){}()) ------------- // ---> <= - sorting with iteration of objects by the weight of values
- - let [users] . ----> () // ---> =>
- - let [users] . ----> () // ---> <=
- - let [users] . ----> () // ---> =>
- - let [users] . ----> () // ---> <=
- - let [users] . ----> () // ---> =>
- - let [users] . ----> () // ---> <=
- - let [users] . ----> () // ---> =>
+ - let [users] .reduce -----> (function(acc,currentValue){},[]) // ---> => -
 
- *** // A string is both a primitive and a reference data type // ***
+*** Notes ***
+ - A string is both a primitive and a reference data type

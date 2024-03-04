@@ -30,13 +30,19 @@
 
 *** Array callback functions ***
               Name of method:
- - let [arr] . ----> ()                           // ---> <=
- - let [arr] . ----> ()                           // ---> =>
- - let [arr] . ----> ()                           // ---> <=
-
-
-
-
-
+ - let [users] .forEach ----> (function(value,index,array){}()) // ---> <= - array iteration
+ - let [users] .filter -----> (function(value,index,array){}()) // ---> => - filtering array elements
+ - let [users] .map --------> (function(value,index,array){}()) // ---> <= - creation of array objects based on the elements of the existing one
+ - let [users] .find -------> (function(value,index,array){}()) // ---> => - finding an element by condition
+ - let [users] .every ------> (function(value,index,array){}()) // ---> <= - checking an array for a boolean value - false
+ - let [users] .some -------> (function(value,index,array){}()) // ---> => - checking an array for a boolean value + true
+ - let [users] .sort -------> (function(a,b){}()) ------------- // ---> <= - sorting with iteration of objects by the weight of values
+ - let [users] . ----> () // ---> =>
+ - let [users] . ----> () // ---> <=
+ - let [users] . ----> () // ---> =>
+ - let [users] . ----> () // ---> <=
+ - let [users] . ----> () // ---> =>
+ - let [users] . ----> () // ---> <=
+ - let [users] . ----> () // ---> =>
 
  *** // A string is both a primitive and a reference data type // ***

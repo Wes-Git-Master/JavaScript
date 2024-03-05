@@ -37,7 +37,7 @@
  - let [users] .every ------> (function(value,index,array){}()) // ---> <= - checking an array for a boolean value - false
  - let [users] .some -------> (function(value,index,array){}()) // ---> => - checking an array for a boolean value + true
  - let [users] .sort -------> (function(a,b){}()) ------------- // ---> <= - sorting with iteration of objects by the weight of values
- - let [users] .reduce -----> (function(acc,currentValue){},[]) // ---> => -
+ - let [users] .reduce -----> (function(acc,currentValue){},[]) // ---> => - reducing or simplifying something
 
 *** Notes ***
  - A string is both a primitive and a reference data type

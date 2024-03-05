@@ -1,25 +1,55 @@
 // - Знайти та вивести довижину настипних стрінгових значень
 //   'hello world', 'lorem ipsum', 'javascript is cool'
 
+let strA = 'hello world' + 'lorem ipsum' + 'javascript is cool'
+let resStrA = strA.replaceAll(' ', '')
+console.log('length =', resStrA.length);
 
 // - Перевести до великого регістру наступні стрінгові значення
 //   'hello world', 'lorem ipsum', 'javascript is cool'
 
+let strB1 = 'hello world'
+let strB2 = 'lorem ipsum'
+let strB3 = 'javascript is cool'
+console.log(strB1.toUpperCase());
+console.log(strB2.toUpperCase());
+console.log(strB3.toUpperCase());
 
-// - Перевести до нижнього регістру настипні стрінгові значення
+// - Перевести до нижнього регістру наступні стрінгові значення
 //   'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
 
+let strC1 = 'hello world'
+let strC2 = 'lorem ipsum'
+let strC3 = 'javascript is cool'
+console.log(strC1.toLowerCase());
+console.log(strC2.toLowerCase());
+console.log(strC3.toLowerCase());
 
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 
+let strD1 = ' dirty string   '
+let strD1clean = strD1.substring(1, 13)
+console.log(strD1clean);
+
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
-//   let str = 'Ревуть воли як ясла повні';
 //   let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
 
+let str = 'Ревуть воли як ясла повні';
+
+function stringToarray() {
+    let stringToarray = str.split(' ')
+    console.log(stringToarray)
+    return str
+}
+
+stringToarray(str.split(' '))
 
 // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
 
+let arr = [10, 8, -7, 55, 987, -1011, 0, 1050, 0]
+let mapToStr = arr.map(value => value + '')
+console.log(mapToStr);
 
 // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого,
 //   або навпаки в залежності від значення аргументу direction.
@@ -27,24 +57,70 @@
 //   sortNums(nums,'ascending') // [3,11,21]
 //   sortNums(nums,'descending') // [21,11,3]
 
+let nums = [11, 21, 3];
+let inputOfDirection = 'ascending'
 
-// ==========================
+function foo(direction) {
+    if (direction === 'ascending') {
+        let sortNumsAscending = nums.sort((a, b) => a - b)
+        console.log('ascending -', sortNumsAscending);
+    } else if (direction === 'descending') {
+        let sortNumsDescending = nums.sort((a, b) => b - a)
+        console.log('descending -', sortNumsDescending);
+    } else {
+        console.log('Input the direction !!!')
+    }
+    return nums
+}
+
+foo(inputOfDirection)
+
+// ========================== //
+
 // - є масив
-// let coursesAndDurationArray = [
-//     {title: 'JavaScript Complex', monthDuration: 5},
-//     {title: 'Java Complex', monthDuration: 6},
-//     {title: 'Python Complex', monthDuration: 6},
-//     {title: 'QA Complex', monthDuration: 4},
-//     {title: 'FullStack', monthDuration: 7},
-//     {title: 'Frontend', monthDuration: 4}
-// ];
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
 // -- відсортувати його за спаданням за monthDuration
+let cAdASort = coursesAndDurationArray.sort((a, b) => {
+    return b.monthDuration - a.monthDuration
+})
+console.log('sorted', cAdASort);
 // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
-// -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+let cAdAFilter = coursesAndDurationArray.filter(value => value.monthDuration > 5)
+console.log('filtered', cAdAFilter);
 
+// -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+let cAdAMap = coursesAndDurationArray.map((value, index) => {
+    return {
+        id: index,
+        title: value.title,
+        monthDuration: value.monthDuration
+    }
+})
+console.log('mapped', cAdAMap);
 
 // =========================
 //     описати колоду карт (від 6 до туза без джокерів)
+let cardSuits = ['spade', 'diamond', 'heart', 'clubs']
+let values = [6,7,8,9,10,'ace', 'jack', 'queen', 'king']
+let deck = () => {
+    let mix = []
+    for (const cardSuit of cardSuits) {
+        for (const value of values) {
+            mix.push({cardSuit: cardSuit, value: value})
+        }
+    }
+    mix.map(item=> item.cardSuit === 'буба' || item.cardSuit === 'чірва' ? item.color = 'red' : item.color = 'black')
+    return mix
+}
+let cards = (deck());
+console.log(cards);
 // - знайти піковий туз
 // - всі шістки
 // - всі червоні карти
@@ -56,6 +132,7 @@
 //         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
 //     color:'', // 'red','black'
 // }
+
 
 
 // =========================

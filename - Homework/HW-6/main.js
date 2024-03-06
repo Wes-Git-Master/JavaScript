@@ -107,8 +107,14 @@ console.log('mapped', cAdAMap);
 
 // =========================
 //     описати колоду карт (від 6 до туза без джокерів)
-let cardSuits = ['spade', 'diamond', 'heart', 'clubs']
-let values = [6,7,8,9,10,'ace', 'jack', 'queen', 'king']
+// {
+//     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
+//         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
+//     color:'', // 'red','black'
+// }
+
+let cardSuits = ['spade', 'diamond', 'heart', 'clubs'] // «піка», «бубна», «черва», «трефа» //
+let values = [6, 7, 8, 9, 10, 'ace', 'jack', 'queen', 'king']
 let deck = () => {
     let mix = []
     for (const cardSuit of cardSuits) {
@@ -116,22 +122,53 @@ let deck = () => {
             mix.push({cardSuit: cardSuit, value: value})
         }
     }
-    mix.map(item=> item.cardSuit === 'буба' || item.cardSuit === 'чірва' ? item.color = 'red' : item.color = 'black')
+    mix.map(item => item.cardSuit === 'diamond' || item.cardSuit === 'heart' ? item.color = 'red' : item.color = 'black')
     return mix
 }
 let cards = (deck());
-console.log(cards);
-// - знайти піковий туз
-// - всі шістки
-// - всі червоні карти
-// - всі буби
+let find = cards.reduce(
+    (accumulator, card) => {
+        if (card.cardSuit === 'spade' && card.value === 'ace') {
+            accumulator[0].push(card)
+        }
+        if (card.value === 6) {
+            accumulator[1].push(card)
+        }
+        if (card.color === 'red') {
+            accumulator[2].push(card)
+        }
+        if (card.cardSuit === 'diamond') {
+            accumulator[3].push(card)
+        }
+
+        if (card.cardSuit === 'clubs') {
+            accumulator[4].push(card)
+        }
+        if (card.cardSuit === 'clubs' && card.value < 9) {
+            accumulator[4].pop()
+        }
+
+        return accumulator
+    },
+    [[], [], [], [], []]
+);
+// - знайти піковий туз    //
+// - всі шістки            //
+// - всі червоні карти     //
+// - всі буби              //
 // - всі трефи від 9 та більше
-//
-// {
-//     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
-//         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
-//     color:'', // 'red','black'
-// }
+let findSpadeAce = find[0]
+console.log('findSpadeAce :', findSpadeAce);
+let findAllSixes = find[1]
+console.log('findAllSixes :', findAllSixes);
+let findAllRedCards = find[2]
+console.log('findAllRedCards :', findAllRedCards);
+let findAllDiamonds = find[3]
+console.log('findAllDiamonds :', findAllDiamonds);
+let allClubsFrom9AndMore = find[4]
+console.log('allClubsFrom9AndMore :', allClubsFrom9AndMore)
+
+
 
 
 

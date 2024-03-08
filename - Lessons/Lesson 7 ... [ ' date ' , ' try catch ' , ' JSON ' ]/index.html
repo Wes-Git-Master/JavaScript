@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    // try {
+    //     console.log(a);
+    // } catch (e) {
+    //     console.log(e);
+    // }
+    // console.log('asdsad');
+
+
+    // function divider(a, b) {
+    //     if (!b) {
+    //         throw new Error('b cannot be 0');
+    //     }
+    //     return a / b;
+    //
+    //
+    // }
+    //
+    // try {
+    //     divider(10, 0);
+    // } catch (e) {
+    //     //......
+    // }
+
+
+    // let obj = {
+    //     name: 'kokos',
+    //
+    // }
+
+    // console.log(obj.wife.name);
+    // if (obj.wife) {
+    //     console.log(obj.wife.name);
+    // }
+    // console.log(obj.wife?.name);
+
+    // let obj = {
+    //     name: 'kokos',
+    //     age: 31,
+    //     greeting() {
+    //         console.log('my name is ' + this.name);
+    //     },
+    //     wife: {
+    //         name: 'olya',
+    //
+    //     }
+    // }
+    //
+    // // let name = obj.name;
+    // let {name, age} = obj;
+    // console.log(name);
+    // console.log(age);
+    //
+    // function fooo({name: imya, age, wife, wife: {name}}) {
+    //
+    //
+    //     console.log(imya, age, wife, name);
+    // }
+    //
+    // fooo(obj);
+
+
+    // let [a, , c] = [11, 22, 33, 44, 55, 66, 77];
+    // console.log(a, c);
+
+
+    // let user = {
+    //     name: 'kokos',
+    //     age: 31,
+    //     status: true,
+    //     wife: {
+    //         name: 'anna'
+    //     }
+    // }
+    //
+    // let copy = {...user};
+    // // copy.id = 1;
+    // // console.log(copy);
+    // // console.log(user)
+    // // console.log(copy === user);
+    //
+    // console.log(copy.wife === user.wife);
+
+
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    //
+    // console.log(users.map((user, index) => ({id: index + 1, ...user, age: user.age + 1})));
+
+
+    let user = {
+        name: 'max',
+        age: 31,
+        status: true,
+        foo() {
+            console.log('bar');
+        },
+    };
+
+    // JSON -string
+    // console.log("{'name': 'max', 'age': 31, 'status': true}");
+    let stringify = JSON.stringify(user);
+    console.log(stringify);
+
+    console.log(JSON.parse(stringify));
+
+
+</script>
+</body>
+</html>

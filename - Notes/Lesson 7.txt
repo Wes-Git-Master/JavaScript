@@ -38,3 +38,8 @@
 
  *** Optional Chain Operator ***
  =====================================================================================
+||   let user = undefined
+||   user?.name?.fn;
+||   < ? >
+||   Note: protection against potentially impossible variations when the object may not arrive
+ ==================================================================================================

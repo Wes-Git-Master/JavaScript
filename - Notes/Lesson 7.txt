@@ -1,7 +1,7 @@
  *** Date ***
  ===================================================================================
  - let now = new Date() ----------------------> // ---> => - show the Date
-                 Name of method:
+                            === Name of method ===
  - console.log ( now.getFullYear() ) ---------> // ---> <= - show the Year
  - console.log ( now.getMonth() ) ------------> // ---> <= - show the Month
  - console.log ( now.getDay() ) --------------> // ---> <= - show the Day
@@ -9,5 +9,10 @@
  - console.log ( now.getMinutes() ) ----------> // ---> <= - show the Minute
  - console.log ( now.getSeconds() ) ----------> // ---> <= - show the Second
  - console.log ( now.getMilliseconds() ) -----> // ---> <= - show the Millisecond
- - console.log ( now.getTime() ) -------------> // ---> <= - show the Time
+ - console.log ( now.getTime() ) -------------> // ---> <= - unix time
+                            === Time output formats ===
+ - let date1 = new Date(1673536118048)
+ - let date1 = new Date("June 10 1991 12:30:34")
+ - let date1 = new Date(1987, 0, 30, 12, 30, 50, 0)
  ===================================================================================
+

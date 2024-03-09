@@ -1,20 +1,20 @@
  *** Date ***
  =====================================================================================
- - let now = new Date() ----------------------> // ---> => - show the Date
-                            === Name of method ===
- - console.log ( now.getFullYear() ) ---------> // ---> <= - show the Year
- - console.log ( now.getMonth() ) ------------> // ---> <= - show the Month
- - console.log ( now.getDay() ) --------------> // ---> <= - show the Day
- - console.log ( now.getHours() ) ------------> // ---> <= - show the Hour
- - console.log ( now.getMinutes() ) ----------> // ---> <= - show the Minute
- - console.log ( now.getSeconds() ) ----------> // ---> <= - show the Second
- - console.log ( now.getMilliseconds() ) -----> // ---> <= - show the Millisecond
- - console.log ( now.getTime() ) -------------> // ---> <= - unix time
-                            === Time output formats ===
- - let date1 = new Date(1673536118048)
- - let date1 = new Date("June 10 1991 12:30:34")
- - let date1 = new Date(1987, 0, 30, 12, 30, 50, 0)
- - let date1 = new Date(1987, 0, 30, 12, 30, 50, 0)
+ - let now = new Date() ----------------------> // ---> => - show the Date            ||
+                            === Name of method ===                                    ||
+ - console.log ( now.getFullYear() ) ---------> // ---> <= - show the Year            ||
+ - console.log ( now.getMonth() ) ------------> // ---> <= - show the Month           ||
+ - console.log ( now.getDay() ) --------------> // ---> <= - show the Day             ||
+ - console.log ( now.getHours() ) ------------> // ---> <= - show the Hour            ||
+ - console.log ( now.getMinutes() ) ----------> // ---> <= - show the Minute          ||
+ - console.log ( now.getSeconds() ) ----------> // ---> <= - show the Second          ||
+ - console.log ( now.getMilliseconds() ) -----> // ---> <= - show the Millisecond     ||
+ - console.log ( now.getTime() ) -------------> // ---> <= - unix time                ||
+                            === Time output formats ===                               ||
+ - let date1 = new Date(1673536118048)                                                ||
+ - let date1 = new Date("June 10 1991 12:30:34")                                      ||
+ - let date1 = new Date(1987, 0, 30, 12, 30, 50, 0)                                   ||
+ - let date1 = new Date(1987, 0, 30, 12, 30, 50, 0)                                   ||
  =====================================================================================
 
  *** Try catch ***
@@ -43,3 +43,38 @@
 ||   < ? >
 ||   Note: protection against potentially impossible variations when the object may not arrive
  ==================================================================================================
+
+ *** ES6 Objects ***
+  ==================================================================================================
+ ||   let name = 'vasya';            ||         ||   let users = [                                 ||
+ ||   let age = 31;                  ||         ||       {name: 'vasya', age: 31, status: false},  ||
+ ||   let user = {                   ||         ||       {name: 'petya', age: 30, status: true},   ||
+ ||       name,                      ||         ||       {name: 'kolya', age: 29, status: true},   ||
+ ||       age,                       ||         ||       {name: 'olya', age: 28, status: false},   ||
+ ||       foo() {                    ||         ||   ];                                            ||
+ ||           console.log(this);     ||         ||                                                 ||
+ ||       },                         ||         ||   let [{name, age, status}, user2] = users;     ||
+ ||   }                              ||         ||   console.log(user2);                           ||
+ ||   console.log(user);             ||         ||                                                 ||
+ ||   user.foo();                    ||         ||                                                 ||
+ || -------------------------------- ||         || ----------------------------------------------- ||
+ ||                                  ||         ||                                                 ||
+ ||                                  ||         ||                                                 ||
+ ||                                  ||         ||                                                 ||
+ ||                                  ||         ||                                                 ||
+ ||                                  ||         ||                                                 ||
+ ||                                  ||         ||                                                 ||
+ ||                                  ||         ||                                                 ||
+ ||                                  ||         ||                                                 ||
+ ||                                  ||         ||                                                 ||
+ ||                                  ||         ||                                                 ||
+
+
+
+
+
+
+
+
+  ==================================================================================================
+

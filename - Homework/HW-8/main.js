@@ -1,33 +1,35 @@
 // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
 //   створити пустий масив, наповнити його 10 об'єктами new User(....)
+function User(id, name, surname, email, phone) {
+    this.id = id;
+    this.name = name;
+    this.surname = surname;
+    this.email = email;
+    this.phone = phone;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let UserArr = [
+    new User(1, 'Max', 'Ivanovich', 'Max@com.ua', 380111111111),
+    new User(2, 'Ivan', 'Maximovich', 'Ivan@com.ua', 380222222222),
+    new User(3, 'Yuriy', 'Kirilovich', 'Yuriy@com.ua', 380333333333),
+    new User(4, 'Kiril', 'Yurievich', 'Kiril@com.ua', 380444444444),
+    new User(5, 'Anna', 'Vasylivna', 'Anna@com.ua', 380555555555),
+    new User(6, 'Olena', 'Stepanivna', 'Olena@com.ua', 380666666666),
+    new User(7, 'Iryna', 'Oleksandrivna', 'Iryna@com.ua', 380777777777),
+    new User(8, 'Stepan', 'Matvyevich', 'Stepan@com.ua', 380888888888),
+    new User(9, 'Anastasia', 'Oleksandrivna', 'Nastya@com.ua', 380999999999),
+    new User(10, 'Robert', 'Pavlovich', 'Robert@com.ua', 380101010101),
+]
+console.log(UserArr);
 
 // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
 
+let UserArrFilter = UserArr.filter(value => value.id % 2 - 1)
+console.log('Filtering by even id -', UserArrFilter)
+
 // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
+let UserArrSort = UserArr.sort((a, b) => b.id - a.id )
+console.log('Ascending sorting by ID -', UserArrSort)
 
 // - Створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
 //   створити пустий масив, наповнити його 10 об'єктами Client

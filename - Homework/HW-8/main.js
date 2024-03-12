@@ -239,7 +239,9 @@ class Prince {
 let Prince1 = new Prince('Prince', 30, 36)
 console.log(Prince1)
 function whereThePrincess(Cinderella,Prince){
-    console.log()
+    console.log(Cinderella[9].name,Cinderella[9].age,Cinderella[9].footSize)
+    console.log(Prince.name,Prince.age,Prince.shoeFound)
+
     // for (const argument of arguments) {
     //
     // }

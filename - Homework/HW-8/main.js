@@ -81,13 +81,13 @@ function Cars(model, producer, year, maxSpeed, engineCapacity) {
             console.log('їдемо зі швидкістю - ' + this.maxSpeed + ' - km/h')
         },
         info() {
-            console.log('=== info ===')
+            console.log('-----Info-----')
             console.log('model - ' + this.model)
             console.log('producer - ' + this.producer)
             console.log('year - ' + this.year)
             console.log('maxSpeed - ' + this.maxSpeed)
             console.log('engineCapacity - ' + this.engineCapacity)
-
+            console.log('--------------')
         },
         increaseMaxSpeed(newSpeed) {
             console.log('increaseMaxSpeed - ' + newSpeed)
@@ -108,7 +108,6 @@ function Cars(model, producer, year, maxSpeed, engineCapacity) {
 }
 
 let car1 = Cars('audi', 'Audi AG', 2010, 300, 3.3)
-
 console.log(car1)
 car1.drive()
 car1.info()
@@ -147,13 +146,11 @@ class Cars2 {
     }
 
     info() {
-        console.log('=== info ==='),
-            console.log('model - ' + this.model),
-            console.log('producer - ' + this.producer),
-            console.log('year - ' + this.year),
-            console.log('maxSpeed - ' + this.maxSpeed),
-            console.log('engineCapacity - ' + this.engineCapacity)
-
+        console.log('model --- ' + this.model)
+        console.log('producer --- ' + this.producer)
+        console.log('year --- ' + this.year)
+        console.log('maxSpeed --- ' + this.maxSpeed)
+        console.log('engineCapacity --- ' + this.engineCapacity)
     }
 
     increaseMaxSpeed(newSpeed) {
@@ -206,10 +203,6 @@ class Cinderella {
         this.age = age
         this.footSize = footSize
     }
-
-    addNewCinderella(Cinderella) {
-        return []
-    }
 }
 
 let Cinderellas = [
@@ -238,12 +231,15 @@ class Prince {
 
 let Prince1 = new Prince('Prince', 30, 36)
 console.log(Prince1)
-function whereThePrincess(Cinderella,Prince){
-    console.log(Cinderella[9].name,Cinderella[9].age,Cinderella[9].footSize)
-    console.log(Prince.name,Prince.age,Prince.shoeFound)
 
-    // for (const argument of arguments) {
-    //
-    // }
+function CinderellaForThePrince(Cinderella, Prince) {
+    for (const cinderellaElement of Cinderella) {
+        if (cinderellaElement.footSize === Prince.shoeFound) {
+            console.log('Попелюшка принца це -', cinderellaElement)
+        }
+    }
 }
-whereThePrincess(Cinderellas,Prince1)
+
+CinderellaForThePrince(Cinderellas, Prince1)
+let PrinceFindCinderella = Cinderellas.find(Cinderella => Cinderella.footSize === Prince1.shoeFound)
+console.log(PrinceFindCinderella)

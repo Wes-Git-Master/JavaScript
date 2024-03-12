@@ -57,9 +57,13 @@ let ClientArr = [
     new Client(9, 'Anastasia', 'Oleksandrivna', 'Nastya@com.ua', 380999999999,['qwe', 'asd', 'zxc','qwe', 'asd', 'zxc','qwe', 'asd', 'zxc']),
     new Client(10, 'Robert', 'Pavlovich', 'Robert@com.ua', 380101010101,['qwe', 'asd', 'zxc']),
 ]
-console.log(ClientArr);
-
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+
+let ClientArrSort = ClientArr.sort((a, b) => b.order > a.order && b.id - a.id)
+console.log('Ascending sorting and order -', ClientArrSort)
+
+
+
 
 // - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску,
 //   максимальна швидкість, об'єм двигуна. додати в об'єкт функції:

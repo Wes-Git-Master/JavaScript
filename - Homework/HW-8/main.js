@@ -114,8 +114,7 @@ car1.drive()
 car1.info()
 car1.increaseMaxSpeed(330)
 car1.changeYear(2015)
-car1.addDriver({name: 'Jack', age: 31})
-car1.addDriver({name: 'Rouse', age: 26})
+car1.addDriver({name: 'Jack', age: 31, status: false})
 let car2 = Cars('bmw', 'BMW AG', 2005, 220, 2.5)
 console.log('==================')
 console.log(car2)
@@ -123,9 +122,7 @@ car2.drive()
 car2.info()
 car2.increaseMaxSpeed(250)
 car2.changeYear(2020)
-car2.addDriver({name: 'Tom', age: 20})
-car2.addDriver({name: 'Jerry', age: 15})
-
+car2.addDriver({name: 'Rouse', age: 26, status: true})
 
 // - (Те саме, тільки через клас)
 //   Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску,
@@ -136,16 +133,65 @@ car2.addDriver({name: 'Jerry', age: 15})
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
+class Cars2 {
+    constructor(model, producer, year, maxSpeed, engineCapacity) {
+        this.model = model
+        this.producer = producer
+        this.year = year
+        this.maxSpeed = maxSpeed
+        this.engineCapacity = engineCapacity
+    }
+
+    drive() {
+        console.log('їдемо зі швидкістю - ' + this.maxSpeed + ' - km/h')
+    }
+
+    info() {
+        console.log('=== info ==='),
+            console.log('model - ' + this.model),
+            console.log('producer - ' + this.producer),
+            console.log('year - ' + this.year),
+            console.log('maxSpeed - ' + this.maxSpeed),
+            console.log('engineCapacity - ' + this.engineCapacity)
+
+    }
+
+    increaseMaxSpeed(newSpeed) {
+        console.log('increaseMaxSpeed - ' + newSpeed)
+        let speed = this.maxSpeed + newSpeed
+        return speed - this.maxSpeed
+    }
+
+    changeYear(newValue) {
+        console.log('changeYear - ' + newValue)
+        let newYear = this.year + newValue
+        return newYear - this.year
+    }
+
+    addDriver(driver) {
+        console.log('New driver :')
+        console.log(driver)
+        return {}
+    }
+}
+
+let car3 = new Cars2('audi', 'Audi AG', 2010, 300, 3.3)
+console.log(car3)
+car3.drive()
+car3.info()
+car3.increaseMaxSpeed(330)
+car3.changeYear(2015)
+car3.addDriver({name: 'Jack', age: 31, status: false})
 
 
-
-
-
-
-
-
-
-
+let car4 = Cars('bmw', 'BMW AG', 2005, 220, 2.5)
+console.log('==================')
+console.log(car4)
+car4.drive()
+car4.info()
+car4.increaseMaxSpeed(250)
+car4.changeYear(2020)
+car4.addDriver({name: 'Rouse', age: 26, status: true})
 
 
 

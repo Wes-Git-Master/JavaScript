@@ -193,10 +193,32 @@ car4.increaseMaxSpeed(250)
 car4.changeYear(2020)
 car4.addDriver({name: 'Rouse', age: 26, status: true})
 
-
-
 // - Cтворити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
 //   Створити об'єкт "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 //   За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 //   Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
-//   =============================================================================================
+
+class Cinderella {
+    constructor(name,age,footSize) {
+        this.name = name
+        this.age = age
+        this.footSize = footSize
+    }
+    addNewCinderella (Cinderella){
+        return []
+    }
+}
+let newCinderella = [
+    new Cinderella('Anna',19,33),
+    new Cinderella('Maria',23,29),
+    new Cinderella('Sofia',19,26),
+    new Cinderella('Oksana',29,35),
+    new Cinderella('Lesya',18,25),
+    new Cinderella('Iryna',33,39),
+    new Cinderella('Olya',45,37),
+    new Cinderella('Angelina',25,30),
+    new Cinderella('Ulya',24,31),
+    new Cinderella('Princes',20,36),
+
+]
+console.log(newCinderella);

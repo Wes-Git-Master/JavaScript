@@ -18,10 +18,10 @@
 ||   -------------------------------------------
 || - <Teg>.getElementById --------------->  searching || accessing an element by ID
 ||   -------------------------------------------
-|| -
-|| -
-||
-||
+|| - document.querySelector(' slt ') ---->  search || access to the element by css selector
+||                                   ---->         && only the first entry element
+|| - document.querySelectorAll(' slt ') ->  search || access All element by css selector
+||                                   ---->         && find the same identifiers
 ||
 ||
 ||

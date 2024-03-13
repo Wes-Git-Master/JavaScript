@@ -12,9 +12,9 @@
 || -                   --------->    finding by : Tag , finding by : Name ...
 ||   -------------------------------------------
 || - <Teg>.innerText --------->  access text && text only
-|| - <Teg>.innerHTML --------->  access text && correct markup display
+|| - <Teg>.innerHTML --------->  access text || && || correct markup display
 || - <Teg>.style.(property)  ->  styles && inline
-||
+|| - <Teg>.classList.add('class name')  ->  styles && creating styles via class name
 ||
 ||
 ||

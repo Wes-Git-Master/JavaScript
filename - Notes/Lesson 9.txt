@@ -1,6 +1,6 @@
  *** DOM ***
  =====================================================================================
-||                                   === Search ===
+||                                   === Search and access ===
 ||   -------------------------------------------
 || - document.head  --------->   access the head
 || - document.body  --------->   access the body
@@ -11,7 +11,7 @@
 || - <Teg>.getElementByTagNameNS ...
 || -      ...     ---------->   finding by : Tag , finding by : Name ...
 ||   -------------------------------------------
-|| - <Teg>
+|| - <Teg>.innerText --------->
 ||
 ||
 ||

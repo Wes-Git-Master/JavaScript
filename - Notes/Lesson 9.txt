@@ -13,7 +13,7 @@
 ||   -------------------------------------------
 || - <Teg>.innerText --------->  access text && text only
 || - <Teg>.innerHTML --------->  access text && correct markup display
-|| - <Teg>.style.      --------->  styles && inline
+|| - <Teg>.style.(property)  ->  styles && inline
 ||
 ||
 ||

@@ -22,13 +22,6 @@
 ||                                   ---->         && only the first entry element
 || - document.querySelectorAll(' slt ') ->  search || access All element by css selector
 ||                                   ---->         && find the same identifiers
-||
-||
-||
-||
-||
-||
+|| - !!! ---& The query selector takes a snapshot of the state it finds &--- !!!
 ||
  =====================================================================================
-
- console.log ( now.getFullYear() ) ---------> // ---> <= - show the Year

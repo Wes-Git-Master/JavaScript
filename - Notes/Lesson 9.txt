@@ -2,18 +2,18 @@
  =====================================================================================
 ||                                   === Search and access ===
 ||   -------------------------------------------
-|| - document.head  --------->   access the head
-|| - document.body  --------->   access the body
-|| - <Teg>.children --------->   search all elements
+|| - document.head     --------->    access the head
+|| - document.body     --------->    access the body
+|| - <Teg>.children    --------->    search all elements
 ||   -------------------------------------------
 || - <Teg>.getElementByClassName ...
 || - <Teg>.getElementByTagName   ...
 || - <Teg>.getElementByTagNameNS ...
-|| -      ...     ---------->   finding by : Tag , finding by : Name ...
+|| -                   --------->    finding by : Tag , finding by : Name ...
 ||   -------------------------------------------
-|| - <Teg>.innerText --------->
-||
-||
+|| - <Teg>.innerText --------->  access text && text only
+|| - <Teg>.innerHTML --------->  access text && correct markup display
+|| - <Teg>.style.      --------->  styles && inline
 ||
 ||
 ||

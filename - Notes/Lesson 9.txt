@@ -1,0 +1,28 @@
+ *** DOM ***
+ =====================================================================================
+||                                   === Search ===
+||   -------------------------------------------
+|| - document.head  --------->   access the head
+|| - document.body  --------->   access the body
+|| - <Teg>.children --------->   search all elements
+||   -------------------------------------------
+|| - <Teg>.getElementByClassName ...
+|| - <Teg>.getElementByTagName   ...
+|| - <Teg>.getElementByTagNameNS ...
+|| -      ...     ---------->   finding by : Tag , finding by : Name ...
+||   -------------------------------------------
+|| - <Teg>
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+ =====================================================================================
+
+ console.log ( now.getFullYear() ) ---------> // ---> <= - show the Year

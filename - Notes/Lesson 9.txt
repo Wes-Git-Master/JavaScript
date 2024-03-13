@@ -25,3 +25,12 @@
 || - !!! ---& The query selector takes a snapshot of the state it finds &--- !!!
 ||
  =====================================================================================
+ *** DOM ***
+ =====================================================================================
+||                                   === Create Elements ===
+||   -------------------------------------------
+|| - document.createElement('tag name') ------------------------->  creating elements
+|| - document.body.append('variable name') ---------------------->  takes many elements
+|| - document.body.appendChild('variable name') ----------------->  takes only one element
+||
+ =====================================================================================

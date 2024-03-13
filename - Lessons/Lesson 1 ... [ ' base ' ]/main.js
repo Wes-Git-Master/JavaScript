@@ -10,10 +10,12 @@ console.log('jasgjgsa');
 //
 // var b = 'ashgfdh';
 
+
 // let a = 'okten';
 // console.log(a); // okten
 // a = 10005000;
 // console.log(a); // 100500
+
 
 // let data = 'okten';
 // console.log(data);
@@ -40,6 +42,7 @@ console.log('jasgjgsa');
 // const c = 'ashgfdahgs';
 // c = 'gasfdhgsafd';
 
+
 // let w1 = 'okten';
 // let w2 = 'is';
 // let w3 = '\'sucks\'';
@@ -50,6 +53,7 @@ console.log('jasgjgsa');
 //
 // let sen2 = `${w1} ${w2} ${w3}!`;
 // console.log(sen2);
+
 
 // let n1 = 10;
 // let n2 = 20;
@@ -74,6 +78,7 @@ console.log('jasgjgsa');
 // console.log('11' - true); //10
 //
 // console.log('asdsa' - '123123');// NaN
+
 
 // NaN
 // console.log(typeof NaN);
@@ -102,9 +107,11 @@ console.log('jasgjgsa');
 // console.log(+'123d');
 // console.log(parseInt('123asd143'));
 
+
 // alert('asjhgasjhg');
 // let b = confirm('aksjgdjhgsa');
 // console.log(b);
+
 
 // let name = +prompt('enter you name');
 // console.log(name);
@@ -119,9 +126,11 @@ console.log('jasgjgsa');
 // console.log(!!undefined);  // false
 // console.log(!!NaN);  // false
 
+
 // > < >= <= == === != !==
 // console.log(5 > 6);
 // console.log(5 !== 6);
+
 
 // console.log('5' === 5);
 // '5' == 5 -> as314 == 5

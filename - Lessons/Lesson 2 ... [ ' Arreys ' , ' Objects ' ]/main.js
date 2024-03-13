@@ -1,3 +1,4 @@
+
 // let dog = {
 //     id: 1,
 //     name: 'kokos',
@@ -57,6 +58,7 @@
 //
 // console.log(pets[1].length);
 
+
 // let devs = [
 //     {
 //         name: 'vasya', skills: ['html', 'js', 'java']
@@ -89,6 +91,7 @@
 // delete obj.name;
 // console.log(obj);
 
+
 // let p = 0;
 // let p2 = p; // 0
 // console.log(p2);
@@ -119,7 +122,8 @@
 // console.log(true || true); // true
 // console.log(true && false || false);
 
-let user = {name: 'vasya', age: 18}; // 0-18  19-35   36 60
+
+// let user = {name: 'vasya', age: 18}; // 0-18  19-35   36 60
 
 
 // if (user.age > 0 && user.age <= 18) {
@@ -143,6 +147,7 @@ let user = {name: 'vasya', age: 18}; // 0-18  19-35   36 60
 //     document.write('<h2>hello ????</h2>');
 // }
 
+
 switch (user.age) {
     case 18:
     case 35:
@@ -155,7 +160,6 @@ switch (user.age) {
     default:
         console.log('asdhadsgh');
 }
-
 
 // if () {
 // } else {

@@ -1,0 +1,19 @@
+.wrap {
+    background-color: #a29c9c;
+    color: darkred;
+}
+
+.collapse {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.alpha {
+    height: 100px;
+}
+
+.beta {
+    font-size: 30px;
+    margin-bottom: 10px;
+}

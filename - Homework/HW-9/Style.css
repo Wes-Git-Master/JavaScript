@@ -10,10 +10,24 @@
 }
 
 .alpha {
-    height: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: #6c6cb0 solid;
 }
 
 .beta {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 10px;
+}
+.courses {
+    background-color: rgba(0, 128, 0, 0.74);
+    height: 30px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fffbcd;
+    border-radius: 20px;
+    border: #2b2b93 solid 3px;
+    margin-bottom: 3px;
 }

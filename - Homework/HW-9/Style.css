@@ -54,3 +54,14 @@
 .description {
 
 }
+
+/************************************************/
+.member {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-family: "Great Vibes", cursive;
+    color: rgb(65, 65, 253);
+}

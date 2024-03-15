@@ -70,26 +70,19 @@ for (const ArrayElement of coursesAndDurationArray) {
 //   в якому буде <h1 class='heading'> з title  елементу, та <p class='description'> з monthDuration елементу.
 //   Завдання робити через цикли.
 
+
 for (const ArrayElement of coursesAndDurationArray) {
     const div = document.createElement('div')
     div.classList.add('item')
-    console.log(div)
-
-
+    const h1 = document.createElement('hi')
+    h1.classList.add('heading')
+    h1.innerHTML = `${ArrayElement.title}`
+    const p = document.createElement('p')
+    p.classList.add('description')
+    p.innerHTML = `- ${ArrayElement.monthDuration}`
+    div.append(h1, p)
+    document.body.append(div)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ==========================
 

@@ -19,6 +19,8 @@
     font-size: 25px;
     margin-bottom: 3px;
 }
+
+/***********************************************/
 .courses {
     background-color: rgba(0, 128, 0, 0.74);
     height: 10vw;
@@ -30,4 +32,25 @@
     border-radius: 20px;
     border: #2b2b93 solid 3px;
     margin-bottom: 3px;
+}
+
+/**********************************************/
+.item {
+    background-color: rgba(171, 163, 163, 0.58);
+    height: 50px;
+    margin: 5px;
+    border-radius: 5px;
+    border: #2b2b93 10px double;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {
+    margin-right: 6px;
+    color: #a80707;
+}
+
+.description {
+
 }

@@ -13,6 +13,115 @@
 </head>
 <body>
 
-<script src="main.js"></script>
+<!--<script src="main.js"></script>-->
+<script>
+
+    let coursesArray = [
+        {
+            title: 'JavaScript Complex',
+            monthDuration: 5,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+        },
+        {
+            title: 'Java Complex',
+            monthDuration: 6,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'angular',
+                'aws',
+                'docker',
+                'git',
+                'java core',
+                'java advanced']
+        },
+        {
+            title: 'Python Complex',
+            monthDuration: 6,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'angular',
+                'aws',
+                'docker',
+                'python core',
+                'python advanced']
+        },
+        {
+            title: 'QA Complex',
+            monthDuration: 4,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+        },
+        {
+            title: 'FullStack',
+            monthDuration: 7,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'react',
+                'angular',
+                'aws',
+                'docker',
+                'git',
+                'node.js',
+                'python',
+                'java']
+        },
+        {
+            title: 'Frontend',
+            monthDuration: 4,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+        }
+    ];
+
+
+    for (const object of coursesArray) {
+        /**********************   objectBlock   *******************/
+        let objectBlock = document.createElement('div')
+        objectBlock.classList.add('objectBlock')
+        document.body.append(objectBlock)
+
+        /**********************   title   *************************/
+        const title = document.createElement('div')
+        title.classList.add('titleBlock')
+        title.innerHTML = `${object.title}`
+
+        /**********************   monthDuration   *****************/
+        const monthDuration = document.createElement('div')
+        monthDuration.classList.add('monthDurationBlock')
+        monthDuration.innerHTML = `${object.monthDuration}`
+
+        /**********************   hourDuration   *****************/
+        const hourDuration = document.createElement('div')
+        hourDuration.classList.add('hourDurationBlock')
+        hourDuration.innerHTML = `${object.hourDuration}`
+
+        /************   monthDuration + hourDuration  ************/
+        let monthDurationHourDuration = document.createElement('div')
+        monthDurationHourDuration.classList.add('monthDurationHourDuration')
+        monthDurationHourDuration.append(monthDuration,hourDuration)
+        /**********************   modules   **********************/
+        const modules = document.createElement('div')
+        modules.classList.add('modulesBlock')
+        modules.innerHTML =
+
+        objectBlock.append(title,monthDurationHourDuration, modules)
+
+    }
+
+
+</script>
 </body>
 </html>

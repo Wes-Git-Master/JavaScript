@@ -69,24 +69,43 @@
 .objectBlock{
     height: 80vh;
     background-color: #4a4a9b;
+    padding-top: 1px;
+    margin-top: 5px;
 }
 .titleBlock{
-    height: 3vh;
-    width: 13vw;
+    height: 5vh;
+    width: 97.3vw;
     background-color: #9d2525;
     margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Great Vibes", cursive;
+    font-size: 25px;
+}
+.monthDurationHourDuration{
+display: flex;
 }
 .monthDurationBlock{
-    height: 3vh;
-    width: 13vw;
+    height: 5vh;
+    width: 49.3vw;
     background-color: #9d2525;
     margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
 }
 .hourDurationBlock{
-    height: 3vh;
-    width: 13vw;
+    height: 5vh;
+    width: 49.3vw;
     background-color: #9d2525;
     margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 .modulesBlock{
     height: 50vh;

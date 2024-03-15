@@ -218,26 +218,44 @@ let coursesArray = [
 
 for (const object of coursesArray) {
 
+    /**********************   objectBlock   *******************/
     let objectBlock = document.createElement('div')
     objectBlock.classList.add('objectBlock')
     document.body.append(objectBlock)
 
+    /**********************   title   *************************/
     const title = document.createElement('div')
     title.classList.add('titleBlock')
     title.innerHTML = `${object.title}`
 
+    /**********************   monthDuration   *****************/
     const monthDuration = document.createElement('div')
     monthDuration.classList.add('monthDurationBlock')
     monthDuration.innerHTML = `${object.monthDuration}`
 
+    /**********************   hourDuration   *****************/
     const hourDuration = document.createElement('div')
     hourDuration.classList.add('hourDurationBlock')
     hourDuration.innerHTML = `${object.hourDuration}`
 
+    /************   monthDuration + hourDuration  ************/
+    let monthDurationHourDuration = document.createElement('div')
+    monthDurationHourDuration.classList.add('monthDurationHourDuration')
+    monthDurationHourDuration.append(monthDuration,hourDuration)
+    /**********************   modules   **********************/
     const modules = document.createElement('div')
     modules.classList.add('modulesBlock')
 
+    for (const liElement of object.modules) {
+        let li = document.createElement('li')
+        li.innerHTML = liElement
+        li.classList.add('li')
+        let ul = document.createElement('ul')
+        ul.append(li)
+        ul.classList.add('ul')
+        modules.appendChild(ul)
+    }
 
-    objectBlock.append(title, monthDuration, hourDuration, modules)
-
+    objectBlock.append(title,monthDurationHourDuration, modules)
 }
+

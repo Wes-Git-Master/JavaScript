@@ -127,7 +127,6 @@ let simpsons = [
         photo: 'https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png'
     },
 ];
-console.log(simpsons)
 for (const simpson of simpsons) {
     const div = document.createElement('div')
     div.classList.add('member')
@@ -215,3 +214,30 @@ let coursesArray = [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
+
+
+for (const object of coursesArray) {
+
+    let objectBlock = document.createElement('div')
+    objectBlock.classList.add('objectBlock')
+    document.body.append(objectBlock)
+
+    const title = document.createElement('div')
+    title.classList.add('titleBlock')
+    title.innerHTML = `${object.title}`
+
+    const monthDuration = document.createElement('div')
+    monthDuration.classList.add('monthDurationBlock')
+    monthDuration.innerHTML = `${object.monthDuration}`
+
+    const hourDuration = document.createElement('div')
+    hourDuration.classList.add('hourDurationBlock')
+    hourDuration.innerHTML = `${object.hourDuration}`
+
+    const modules = document.createElement('div')
+    modules.classList.add('modulesBlock')
+
+
+    objectBlock.append(title, monthDuration, hourDuration, modules)
+
+}

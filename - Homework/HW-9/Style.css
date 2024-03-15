@@ -65,3 +65,32 @@
     font-family: "Great Vibes", cursive;
     color: rgb(65, 65, 253);
 }
+/*************************************************/
+.objectBlock{
+    height: 80vh;
+    background-color: #4a4a9b;
+}
+.titleBlock{
+    height: 3vh;
+    width: 13vw;
+    background-color: #9d2525;
+    margin: 5px;
+}
+.monthDurationBlock{
+    height: 3vh;
+    width: 13vw;
+    background-color: #9d2525;
+    margin: 5px;
+}
+.hourDurationBlock{
+    height: 3vh;
+    width: 13vw;
+    background-color: #9d2525;
+    margin: 5px;
+}
+.modulesBlock{
+    height: 50vh;
+    width: 13vw;
+    background-color: #9d2525;
+    margin: 5px;
+}

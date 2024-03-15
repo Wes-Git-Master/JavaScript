@@ -1,6 +1,6 @@
 .wrap {
     background-color: #a29c9c;
-    color: darkred;
+    color: #9d0000;
 }
 
 .collapse {
@@ -17,12 +17,12 @@
 
 .beta {
     font-size: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 .courses {
     background-color: rgba(0, 128, 0, 0.74);
-    height: 30px;
-    width: 350px;
+    height: 10vw;
+    width: 85vw;
     display: flex;
     align-items: center;
     justify-content: center;

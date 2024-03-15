@@ -95,7 +95,7 @@ let simpsons = [
         name: 'Bart',
         surname: 'Simpson',
         age: 10,
-        info: 'Бартолом\'ю ДжоДжо «Барт» Сімпсон (англ. Bartholomew JoJo «Bart» Simpson) — один із головних героїв мультиплікаційного серіалу Сімпсони. Барт — найстарша дитина Гомера і Мардж Сімпсон. У нього також є дві молодші сестри — Ліса і Меґґі. Барт є втіленням образу бешкетника та посереднього учня у школі. Разом зі своїм батьком Барт є одним із найвідоміших персонажів у цьому серіалі.',
+        info: 'Бартоломео ДжоДжо «Барт» Сімпсон (англ. Bartholomew JoJo «Bart» Simpson) — один із головних героїв мультиплікаційного серіалу Сімпсони. Барт — найстарша дитина Гомера і Мардж Сімпсон. У нього також є дві молодші сестри — Ліса і Меґґі. Барт є втіленням образу бешкетника та посереднього учня у школі. Разом зі своїм батьком Барт є одним із найвідоміших персонажів у цьому серіалі.',
         photo: 'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'
     },
     {
@@ -215,7 +215,6 @@ let coursesArray = [
     }
 ];
 
-
 for (const object of coursesArray) {
 
     /**********************   objectBlock   *******************/
@@ -241,11 +240,11 @@ for (const object of coursesArray) {
     /************   monthDuration + hourDuration  ************/
     let monthDurationHourDuration = document.createElement('div')
     monthDurationHourDuration.classList.add('monthDurationHourDuration')
-    monthDurationHourDuration.append(monthDuration,hourDuration)
+    monthDurationHourDuration.append(monthDuration, hourDuration)
+
     /**********************   modules   **********************/
     const modules = document.createElement('div')
     modules.classList.add('modulesBlock')
-
     for (const liElement of object.modules) {
         let li = document.createElement('li')
         li.innerHTML = liElement
@@ -255,7 +254,6 @@ for (const object of coursesArray) {
         ul.classList.add('ul')
         modules.appendChild(ul)
     }
-
-    objectBlock.append(title,monthDurationHourDuration, modules)
+    objectBlock.append(title, monthDurationHourDuration, modules)
 }
 

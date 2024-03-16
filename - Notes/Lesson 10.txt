@@ -14,3 +14,6 @@
     1) setItem
     2) getItem
     3) clear
+    let storage = JSON.parse(localStorage.getItem('products')) || [];
+        storage.push(productItem)
+        localStorage.setItem('products', JSON.stringify(storage));

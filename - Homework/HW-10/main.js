@@ -19,11 +19,11 @@ form.onsubmit = function (e) {
     console.log(obj)
     let div = document.createElement('div');
     let pName = document.createElement('p');
-    pName.innerHTML = `${obj.name}`
+    pName.innerHTML = 'name - ' + `${obj.name}`
     let pSurname = document.createElement('p');
-    pSurname.innerHTML = `${obj.surname}`
+    pSurname.innerHTML = 'surname - ' + `${obj.surname}`
     let pAge = document.createElement('p');
-    pAge.innerHTML = `${obj.age}`
+    pAge.innerHTML = 'age - ' + `${obj.age}`
     div.append(pName, pSurname, pAge)
     document.body.append(div)
 };
@@ -33,19 +33,6 @@ console.log('  ******************')
 
 // Є сторінка, на якій є блок, я кому знаходиьтся цифра.
 // Написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // ==========================

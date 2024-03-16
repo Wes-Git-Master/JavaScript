@@ -34,6 +34,11 @@ console.log('  ******************')
 // Є сторінка, на якій є блок, я кому знаходиьтся цифра.
 // Написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 
+let divNumberOne = document.createElement('div');
+let number = divNumberOne.innerText = 1;
+console.log(number);
+
+
 
 // ==========================
 

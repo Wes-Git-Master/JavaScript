@@ -68,9 +68,7 @@ foo7('Text-3', 3);
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
-
 let arr = ['world', 100500, true, false];
-
 function foo8() {
     const foo = () => {
         for (const argument of arguments) {

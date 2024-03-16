@@ -2,5 +2,8 @@
 - oninput - triggering of events when entering data
 - onfocus - trigger event when focusing
 - onblur  - trigger event when defocusing
+- onmouseover - && trigger event when focusing
+- onmouseleave - && trigger event when defocusing
 
 - .addEventListener - supplementing events with additional events
+- .onsubmit = function (e) {} - Override for default events of any DOM element

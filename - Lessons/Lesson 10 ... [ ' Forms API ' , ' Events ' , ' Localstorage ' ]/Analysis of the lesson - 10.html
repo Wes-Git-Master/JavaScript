@@ -21,7 +21,7 @@
 </form>
 <form action="/asd" name="form2">
     <input type="text" name="username">
-    <input type="password" name="password">
+    <input type="password" name="password" value="xxxxxx">
     <button>send</button>
 </form>
 
@@ -51,6 +51,34 @@
     inputPassword.onblur = function () {
         inputPassword.type = 'password'
     }
+    inputPassword.addEventListener('focus',function () {
+        console.log(this.value)
+    })
+//******************************************************//
+
+    console.log('**********  Form2  ***********')
+    let Form2 = document.forms['form2'];
+
+    let input2Username = Form2.username;
+
+    let input2Password = Form2.password
+    input2Password.onmouseover = function () {
+        this.type = 'text'
+    }
+    input2Password.onmouseleave = function () {
+        this.type = 'password'
+    }
+    users = []
+    Form2.onsubmit = function (e) {
+        e.preventDefault()
+        let obj = {
+            username: this.username.value,
+            password: this.password.value
+        }
+        users.push(obj)
+        console.log(users)
+    }
+
 
 
 </script>

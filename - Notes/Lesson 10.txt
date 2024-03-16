@@ -5,5 +5,7 @@
 - onmouseover - && trigger event when focusing
 - onmouseleave - && trigger event when defocusing
 
-- .addEventListener - supplementing events with additional events
-- .onsubmit = function (e) {} - Override for default events of any DOM element
+- .addEventListener  - supplementing events with additional events
+- 'DOM element'.onsubmit = function (e) {
+        e.preventDefault() - Override for default events of any DOM element
+   }

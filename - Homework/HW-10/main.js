@@ -5,19 +5,48 @@
 let form = document.forms['form'];
 let name = form.name;
 console.log(name)
-
 let surname = form.surname;
 console.log(surname)
-
 let age = form.age;
 console.log(age)
+form.onsubmit = function (e) {
+    e.preventDefault();
+    let obj = {
+        name: this.name.value,
+        surname: this.surname.value,
+        age: this.age.value
+    }
+    console.log(obj)
+    let div = document.createElement('div');
+    let pName = document.createElement('p');
+    pName.innerHTML = `${obj.name}`
+    let pSurname = document.createElement('p');
+    pSurname.innerHTML = `${obj.surname}`
+    let pAge = document.createElement('p');
+    pAge.innerHTML = `${obj.age}`
+    div.append(pName, pSurname, pAge)
+    document.body.append(div)
+};
+console.log('  ******************')
 
-
-console.log('******************')
 // ==========================
 
 // Є сторінка, на якій є блок, я кому знаходиьтся цифра.
 // Написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ==========================
 

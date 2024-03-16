@@ -6,80 +6,89 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
-    <style>
-        #products {
-            width: 200px;
-
-            img {
-                width: 100%;
-            }
-        }
-
-
-    </style>
 </head>
 <body>
-<div id="products"></div>
+<h1 id="h1"></h1>
+<form action="/asd" name="form1">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <button>send</button>
+</form>
+<hr>
+
+<form action="/asd" name="form2">
+    <input type="text" name="username">
+    <input type="password" name="password" value="qqq">
+    <button>send</button>
+</form>
 
 <script>
 
+    // console.log(document);
+    // console.log(document.forms);
+    // console.log(document.forms.form1);
+    let form1 = document.forms['form1'];
+    console.log(form1);
+    let inputUsername = form1.username;
+    console.log(inputUsername);
+    inputUsername.value = 'kokos';
 
-    let products = [
-        {
-            title: 'milk',
-            price: 22,
-            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
-        },
-        {
-            title: 'juice',
-            price: 27,
-            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
-        },
-        {
-            title: 'tomato',
-            price: 47,
-            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
-        },
-        {
-            title: 'tea',
-            price: 15,
-            image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
-        },
-    ];
+    console.log(inputUsername);
+    let h1 = document.getElementById('h1');
+    inputUsername.oninput = function () {
+        h1.innerText = this.value;
+    };
 
-    let target = document.getElementById('products');
-    console.log(target);
+    let passwordInput = form1['password'];
+    console.log(passwordInput);
 
-    function productDomCreator(productItem, target) {
-
-        let div = document.createElement('div');
-        let h2 = document.createElement('h2');
-        h2.innerText = productItem.title + ' ' + productItem.price + 'грн'
-        let img = document.createElement('img');
-        img.src = productItem.image;
-
-        let button = document.createElement('button');
-        button.innerText = 'add to cart';
-
-        button.addEventListener('click', function (e) {
-            console.log(productItem);
-            let storage = JSON.parse(localStorage.getItem('products')) || [];
-            storage.push(productItem)
-            localStorage.setItem('products', JSON.stringify(storage));
-
-
-        });
-
-        div.append(h2, img, button);
-        target.appendChild(div);
-
+    passwordInput.value = 'xxxx';
+    passwordInput.onfocus = function () {
+        this.type = 'text';
     }
+    passwordInput.onblur = function () {
+        passwordInput.type = 'password';
 
+    };
+    /*--------------------*/
 
-    for (const product of products) {
+    passwordInput.addEventListener('focus', function () {
+        console.log(this.value);
+    });
 
-        productDomCreator(product, target);
-    }
+    /*form2*/
+    console.log('***************')
+    let form2 = document.forms['form2'];
+    let username2 = form2['username'];
+    let password2 = form2['password'];
+
+    password2.onmouseover = function () {
+        this.type = 'text';
+    };
+    password2.onmouseleave = function (e) {
+        this.type = 'password';
+        console.log(e);
+    };
+
+    let users = [];
+    form2.onsubmit = function (e) {
+
+        e.preventDefault();
+        console.log(e);
+        let obj = {
+            username: this.username.value,
+            password: this.password.value
+        }
+
+        users.push(obj);
+        console.log(users);
+    };
+
+    // let forma = new FormData();
+    // forma.append('asd', 'qweqwe');
+    // forma.append('asd', 'qweqwe');
+    // forma.append('asd', 'qweqwe');
+    // forma.append('asd', 'qweqwe');
 
 
 </script>

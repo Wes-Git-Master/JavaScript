@@ -115,14 +115,14 @@ for (const number of arr1) {
 console.log('----------------------');
 // - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
 let arr4 = ['asd', 'qwe', 'zxc', 'asd', 'qwe', 'asd', 'zxc', 'asd', 'qwe', 'asd'];
-for (const number of arr4) {
-    console.log(number)
+for (const string of arr4) {
+    console.log(string)
 }
 console.log('----------------------');
 // - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
 let arr5 = ['asd', 100, true, false, 'qwe', 200, true, false, 'zxc', 300];
-for (const number of arr5) {
-    console.log(number)
+for (const arrElement of arr5) {
+    console.log(arrElement)
 }
 console.log('----------------------');
 // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
@@ -146,9 +146,9 @@ for (const number of arr7) {
 console.log('----------------------');
 // - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
 let arr8 = ['asd', 100, true, false, 'qwe', 200, true, false, 'zxc', 300];
-for (const number of arr8) {
-    if (typeof number !== typeof '') {
-    } else (console.log(number))
+for (const arElement of arr8) {
+    if (typeof arElement !== typeof '') {
+    } else (console.log(arElement))
 }
 console.log('----------------------');
 // - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.

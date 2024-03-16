@@ -9,3 +9,8 @@
 - 'DOM element'.onsubmit = function (e) {
         e.preventDefault() - Override for default events of any DOM element
    }
+
+ - Locale storage has only 3 functions is -
+    1) setItem
+    2) getItem
+    3) clear

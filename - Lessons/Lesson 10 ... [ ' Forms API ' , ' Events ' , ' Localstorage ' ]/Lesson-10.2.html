@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="h1"></h1>
+<form action="/asd" name="form1">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <button>send</button>
+</form>
+<hr>
+
+<form action="/asd" name="form2">
+    <input type="text" name="username">
+    <input type="password" name="password" value="qqq">
+    <button>send</button>
+</form>
+
+<script>
+
+    // console.log(document);
+    // console.log(document.forms);
+    // console.log(document.forms.form1);
+    let form1 = document.forms['form1'];
+    console.log(form1);
+    let inputUsername = form1.username;
+    console.log(inputUsername);
+    inputUsername.value = 'kokos';
+
+    console.log(inputUsername);
+    let h1 = document.getElementById('h1');
+    inputUsername.oninput = function () {
+        h1.innerText = this.value;
+    };
+
+    let passwordInput = form1['password'];
+    console.log(passwordInput);
+
+    passwordInput.value = 'xxxx';
+    passwordInput.onfocus = function () {
+        this.type = 'text';
+    }
+    passwordInput.onblur = function () {
+        passwordInput.type = 'password';
+
+    };
+    /*--------------------*/
+
+    passwordInput.addEventListener('focus', function () {
+        console.log(this.value);
+    });
+
+    /*form2*/
+    console.log('***************')
+    let form2 = document.forms['form2'];
+    let username2 = form2['username'];
+    let password2 = form2['password'];
+
+    password2.onmouseover = function () {
+        this.type = 'text';
+    };
+    password2.onmouseleave = function (e) {
+        this.type = 'password';
+        console.log(e);
+    };
+
+    let users = [];
+    form2.onsubmit = function (e) {
+
+        e.preventDefault();
+        console.log(e);
+        let obj = {
+            username: this.username.value,
+            password: this.password.value
+        }
+
+        users.push(obj);
+        console.log(users);
+    };
+
+    // let forma = new FormData();
+    // forma.append('asd', 'qweqwe');
+    // forma.append('asd', 'qweqwe');
+    // forma.append('asd', 'qweqwe');
+    // forma.append('asd', 'qweqwe');
+
+
+</script>
+</body>
+</html>

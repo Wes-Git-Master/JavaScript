@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        #products {
+            width: 200px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="products"></div>
+
+<script>
+
+
+    let products = [
+        {
+            title: 'milk',
+            price: 22,
+            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+        },
+        {
+            title: 'juice',
+            price: 27,
+            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+        },
+        {
+            title: 'tomato',
+            price: 47,
+            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+        },
+        {
+            title: 'tea',
+            price: 15,
+            image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+        },
+    ];
+
+    let target = document.getElementById('products');
+    console.log(target);
+
+    function productDomCreator(productItem, target) {
+
+        let div = document.createElement('div');
+        let h2 = document.createElement('h2');
+        h2.innerText = productItem.title + ' ' + productItem.price + 'грн'
+        let img = document.createElement('img');
+        img.src = productItem.image;
+
+        let button = document.createElement('button');
+        button.innerText = 'add to cart';
+
+        button.addEventListener('click', function (e) {
+            console.log(productItem);
+            let storage = JSON.parse(localStorage.getItem('products')) || [];
+            storage.push(productItem)
+            localStorage.setItem('products', JSON.stringify(storage));
+
+
+        });
+
+        div.append(h2, img, button);
+        target.appendChild(div);
+
+    }
+
+
+    for (const product of products) {
+
+        productDomCreator(product, target);
+    }
+
+
+</script>
+</body>
+</html>

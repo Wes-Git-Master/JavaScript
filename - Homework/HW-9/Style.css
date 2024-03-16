@@ -75,7 +75,6 @@
 .objectBlock{
     height: 85vh;
     width: 47vw;
-    /*background-color: #4a4a9b;*/
     padding-top: 1px;
     margin-top: 50px;
 }
@@ -123,16 +122,12 @@
 
 }
 .modulesBlock{
-    height: 59vh;
+    height: 55vh;
     background-color: rgba(157, 37, 37, 0.48);
     margin: 5px;
     border: #2b2b93 5px solid;
     border-radius: 3px;
 
-}
-.li{
-    height: 5px;
-    font-size: 25px;
 }
 .ul{
     padding-top: 10px;

@@ -242,15 +242,15 @@ for (const object of coursesArray) {
     monthDurationHourDuration.classList.add('monthDurationHourDuration')
     monthDurationHourDuration.append(monthDuration, hourDuration)
 
+    let ul = document.createElement('ul')
+
     /**********************   modules   **********************/
     const modules = document.createElement('div')
     modules.classList.add('modulesBlock')
     for (const liElement of object.modules) {
         let li = document.createElement('li')
         li.innerHTML = liElement
-        li.classList.add('li')
-        let ul = document.createElement('ul')
-        ul.append(li)
+        ul.appendChild(li)
         ul.classList.add('ul')
         modules.appendChild(ul)
     }

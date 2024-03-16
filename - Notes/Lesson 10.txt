@@ -1,0 +1,6 @@
+- onclick - trigger event on click
+- oninput - triggering of events when entering data
+- onfocus - trigger event when focusing
+- onblur  - trigger event when defocusing
+
+- .addEventListener - supplementing events with additional events

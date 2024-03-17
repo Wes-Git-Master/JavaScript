@@ -2,6 +2,7 @@
 // При натисканні на кнопку зчитати данні з полів, та вивести об'єкт в документ.
 //  Іншими словами :
 //  заповниои форму, натиснули кнопку, під формою з'явився блок з вашим об'єктом
+
 let form = document.forms['form'];
 let name = form.name;
 console.log(name)
@@ -34,8 +35,18 @@ console.log('  ******************')
 // Є сторінка, на якій є блок, я кому знаходиьтся цифра.
 // Написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 
-let div = document.createElement('div');
-let number = div.innerText = 1
+let Number = 1
+let storage = JSON.parse(localStorage.getItem('number')) || [];
+storage.push(Number)
+localStorage.setItem('number', JSON.stringify(storage));
+let newNumber = [];
+newNumber.push(JSON.stringify(storage.length));
+let div = document.createElement('div')
+let divNum = JSON.stringify(newNumber)
+div.innerHTML =  JSON.parse(divNum)
+document.body.appendChild(div)
+
+
 // ==========================
 
 // Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще,

@@ -26,18 +26,15 @@ form.onsubmit = function (e) {
     document.body.append(div)
 };
 
-
 // ==========================
 
 // Є сторінка, на якій є блок, я кому знаходиьтся цифра.
 // Написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 
 let Number = 1
-
 let session = JSON.parse(sessionStorage.getItem('number')) || [];
 session.push(Number)
 sessionStorage.setItem('number', JSON.stringify(session));
-
 let newNumber = [];
 newNumber.push(JSON.stringify(session.length));
 let div = document.createElement('div')
@@ -765,7 +762,7 @@ document.body.onload = function () {
     console.log('***********************')
 }
 let start = 10;
-let step = 3;
+let step = 10;
 let limit = start + step;
 
 function eventAndAction(domElement,evenType,action) {

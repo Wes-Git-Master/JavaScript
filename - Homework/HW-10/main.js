@@ -758,9 +758,16 @@ let locations = [
         "type": "city"
     }
 ];
-let start = 0;
-let step = 10;
+document.body.onload = function () {
+    for (let i = 0; i < 10; i++) {
+        console.log(locations[i])
+    }
+    console.log('***********************')
+}
+let start = 10;
+let step = 3;
 let limit = start + step;
+
 function eventAndAction(domElement,evenType,action) {
         domElement.addEventListener(evenType,action)
 }
@@ -774,9 +781,32 @@ eventAndAction(document.getElementById('next'),'click',function () {
     }
         start = limit
         limit = limit + step
-
+        console.log('***********************')
 })
 
+
+
+
+
+
+
+
+let start2 = 0;
+let stepPrev = 1;
+let limit2 = start + step;
+eventAndAction(document.getElementById('prev'),'click',function () {
+
+    for (let i = arguments.length - 1; i >= 0; i--) {
+        const argument = arguments[i];
+        if (i < locations.length) {
+            console.log(locations[i])
+
+        }
+    }
+    start = limit
+    limit = limit + step
+    console.log('***********************')
+})
 
 
 

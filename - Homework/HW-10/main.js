@@ -45,7 +45,7 @@ let newNumber = [];
 newNumber.push(JSON.stringify(session.length));
 let div = document.createElement('div')
 let divNum = JSON.stringify(newNumber)
-div.innerHTML =  JSON.parse(divNum)
+div.innerHTML = JSON.parse(divNum)
 document.body.appendChild(div)
 
 // ==========================
@@ -762,35 +762,24 @@ let locations = [
     }
 ];
 
+let start = 0;
+let step = 10;
+let limit = start + step;
 
-
-let next = document.getElementById('next')
-// document.body.onload = function () {
-//     for (let i = 0; i < 10 ; i++) {
-//         const location = locations[i];
-//         console.log(location)
-//     }
-// }
-
-console.log('-----------------------------------')
-
-next.onclick = function () {
-
-    console.log('-----------------------------------')
-    let number = 10
-    for (let i = 0; i < 10; i++) {
-        console.log(locations[i])
-    }
+function paginationNext(domElement,evenType,action) {
+        domElement.addEventListener(evenType,action)
 }
 
-// next.onclick = function () {
-//     for (let i = 0; i < 10 ; i++) {
-//         const location = locations[i];
-//         console.log(location)
-//     }
+paginationNext(document.body,'mouseover',function () {console.log('action');})
+
+
+// function asd(domElement, evenType, whatToDo) {
+//     domElement.addEventListener(evenType, whatToDo);
 // }
+//
+// asd(document.getElementsByTagName('a')[0], 'mouseover', function () {console.log('...');})
 
-
+// asd(document.body, 'click', () => console.log('2'));
 
 
 // ==========================

@@ -36,11 +36,13 @@ console.log('  ******************')
 // Написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 
 let Number = 1
-let storage = JSON.parse(localStorage.getItem('number')) || [];
-storage.push(Number)
-localStorage.setItem('number', JSON.stringify(storage));
+
+let session = JSON.parse(sessionStorage.getItem('number')) || [];
+session.push(Number)
+sessionStorage.setItem('number', JSON.stringify(session));
+
 let newNumber = [];
-newNumber.push(JSON.stringify(storage.length));
+newNumber.push(JSON.stringify(session.length));
 let div = document.createElement('div')
 let divNum = JSON.stringify(newNumber)
 div.innerHTML =  JSON.parse(divNum)
@@ -50,12 +52,17 @@ document.body.appendChild(div)
 
 // Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще,
 // В масив sessions зберігається інформація про дату та час відвідування сторінки.
-// Є ще сторінка sessions.html (назва довільна), при відвідуванні якої потрібно
-//  відмалювати всю інформацію про відвідування сторінки index.html.
+// Є ще сторінка (dataTimeDOM)sessions.html (назва довільна), при відвідуванні якої потрібно
+//  відмалювати всю інформацію про відвідування сторінки (hw.10)index.html.
 // Інфу НЕ виводити в консоль, а побудувати дом структуру під кожну сессію
 
-
-
+let a = document.getElementsByTagName('a');
+let date = new Date()
+a[0].onclick = function () {
+    let storage = JSON.parse(localStorage.getItem('sessions')) || [];
+    storage.push(date.toUTCString())
+    localStorage.setItem('sessions', JSON.stringify(storage));
+}
 
 // =========================
 

@@ -5,11 +5,8 @@
 
 let form = document.forms['form'];
 let name = form.name;
-console.log(name)
 let surname = form.surname;
-console.log(surname)
 let age = form.age;
-console.log(age)
 form.onsubmit = function (e) {
     e.preventDefault();
     let obj = {
@@ -28,7 +25,7 @@ form.onsubmit = function (e) {
     div.append(pName, pSurname, pAge)
     document.body.append(div)
 };
-console.log('  ******************')
+
 
 // ==========================
 
@@ -761,25 +758,28 @@ let locations = [
         "type": "city"
     }
 ];
-
 let start = 0;
 let step = 10;
 let limit = start + step;
-
-function paginationNext(domElement,evenType,action) {
+function eventAndAction(domElement,evenType,action) {
         domElement.addEventListener(evenType,action)
 }
 
-paginationNext(document.body,'mouseover',function () {console.log('action');})
+eventAndAction(document.getElementById('next'),'click',function () {
+
+    for (let i = start; i < limit; i++) {
+        if (i < locations.length) {
+            console.log(locations[i])
+        }
+    }
+        start = limit
+        limit = limit + step
+
+})
 
 
-// function asd(domElement, evenType, whatToDo) {
-//     domElement.addEventListener(evenType, whatToDo);
-// }
-//
-// asd(document.getElementsByTagName('a')[0], 'mouseover', function () {console.log('...');})
 
-// asd(document.body, 'click', () => console.log('2'));
+
 
 
 // ==========================

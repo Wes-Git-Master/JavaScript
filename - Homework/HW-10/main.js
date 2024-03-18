@@ -762,15 +762,30 @@ let locations = [
     }
 ];
 
+let next = document.getElementById('next')
+document.body.onload = function () {
+    for (let i = 0; i < 10 ; i++) {
+        const location = locations[i];
+        console.log(location)
+    }
+}
+console.log('-----------------------------------')
+next.onclick = function () {
+    console.log('-----------------------------------')
+    for (let i = 0; i < locations.length; i++) {
+        console.log(locations[i])
+    }
+}
 
-// for (let i = 0; i < locations.length; i++) {
-//     const location = locations[i];
-//     if (i > 0 && i < 11){
+// next.onclick = function () {
+//     for (let i = 0; i < 10 ; i++) {
+//         const location = locations[i];
 //         console.log(location)
-//     }if ()
-//
-//
+//     }
 // }
+//
+
+
 
 // ==========================
 

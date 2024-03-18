@@ -772,7 +772,7 @@ document.body.onload = function () {
 console.log('-----------------------------------')
 next.onclick = function () {
     console.log('-----------------------------------')
-    for (let i = 0; i < locations.length; i++) {
+    for (let i = 10; i < 20; i++) {
         console.log(locations[i])
     }
 }

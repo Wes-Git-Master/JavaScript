@@ -43,10 +43,19 @@ let newNumber = [];
 newNumber.push(JSON.stringify(session.length));
 let div = document.createElement('div')
 div.style.color = 'red'
-div.style.fontSize = '25px'
+div.style.fontSize = '27px'
 let divNum = JSON.stringify(newNumber)
 div.innerHTML = JSON.parse(divNum)
-document.body.appendChild(div)
+let border = document.createElement('div')
+border.style.border = '2px solid blue'
+border.style.borderRadius = ' 3px'
+border.style.height = '30px'
+border.style.width = '50px'
+border.style.display = 'flex'
+border.style.alignItems = 'center'
+border.style.justifyContent = 'center'
+border.appendChild(div)
+document.body.appendChild(border)
 
 // =============================================================================================
 

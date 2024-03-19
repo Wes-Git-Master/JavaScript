@@ -837,13 +837,23 @@ eventAndAction(ButtonElement,'click',function () {
 //   При натисканні на кнопку зчитати інформацію з інпуту
 //   та перевірити вік чи меньше він ніж 18,та повідомити про це користувача.
 
+let formElement = document.createElement('form');
+formElement.style.display = 'flex'
+formElement.style.flexDirection = 'column'
+formElement.style.marginTop = '10px'
 
+let labelElement = document.createElement('label');
+labelElement.htmlFor = 'age2'
+labelElement.innerHTML = 'age:'
+labelElement.style.marginBottom = '4px'
 
+let inputElement = document.createElement('input');
+inputElement.type = 'number'
+inputElement.name = 'age2'
+inputElement.style.width = '75px'
 
-
-
-
-
+formElement.append(labelElement,inputElement)
+document.body.appendChild(formElement)
 
 
 

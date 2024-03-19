@@ -8,16 +8,23 @@
     <title>hw.10</title>
 </head>
 <body>
-<form action="/asd" name="form">
-    <input type="text" id="name" name="name" placeholder="name">
-    <input type="text" id="surname" name="surname" placeholder="surname">
-    <input type="number" id="age" name="age" placeholder="age">
-    <button>send</button>
+<form action="/asd" name="form" style="display: flex; flex-direction: column ; width: 300px;">
+    <label for="name">name:</label>
+    <input type="text" id="name" name="name">
+    <label for="surname">surname:</label>
+    <input type="text" id="surname" name="surname">
+    <label for="age">age:</label>
+    <input type="number" id="age" name="age">
+    <button style="margin-top: 15px; width: 50px;">send</button>
 </form>
-<a href="dataTimeStorage.html">dataTimeStorage</a>
-<a href="dataTimeDOM.html">dataTimeDOM</a>
-<button id="prev">prev</button>
-<button id="next">next</button>
+<div style="margin-top: 10px; display: flex; flex-direction: column; width: 200px;">
+    <a href="dataTimeStorage.html" style="text-decoration: none; margin-bottom: 4px;">dataTimeStorage</a>
+    <a href="dataTimeDOM.html" style="text-decoration: none; margin-bottom: 10px;">dataTimeDOM</a>
+</div>
+<div style="margin-bottom: 8px;">
+    <button id="prev">prev</button>
+    <button id="next">next</button>
+</div>
 <script src="main.js"></script>
 </body>
 </html>

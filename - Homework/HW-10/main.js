@@ -42,6 +42,8 @@ sessionStorage.setItem('number', JSON.stringify(session));
 let newNumber = [];
 newNumber.push(JSON.stringify(session.length));
 let div = document.createElement('div')
+div.style.color = 'red'
+div.style.fontSize = '25px'
 let divNum = JSON.stringify(newNumber)
 div.innerHTML = JSON.parse(divNum)
 document.body.appendChild(div)

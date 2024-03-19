@@ -819,12 +819,16 @@ eventAndAction(document.getElementById('prev'), 'click', function () {
 //   Використовуючи JavaScript,
 //   зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
 
-
-
-
-
-
-
+let DivElement = document.getElementById('text')
+let ButtonElement = document.createElement('button');
+ButtonElement.innerText = 'disappearance'
+ButtonElement.style.height = '25px'
+ButtonElement.style.width = '110px'
+ButtonElement.style.marginTop = '8px'
+document.body.appendChild(ButtonElement)
+eventAndAction(ButtonElement,'click',function () {
+    DivElement.style.display = 'none'
+})
 
 
 

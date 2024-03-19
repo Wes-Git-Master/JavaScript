@@ -24,6 +24,10 @@ form.onsubmit = function (e) {
     pAge.innerHTML = 'age - ' + `${obj.age}`
     div.append(pName, pSurname, pAge)
     document.body.append(div)
+    document.getElementById('name').value = ''
+    document.getElementById('surname').value = ''
+    document.getElementById('age').value = ''
+
 };
 
 // =============================================================================================
@@ -792,6 +796,7 @@ eventAndAction(document.getElementById('prev'), 'click', function () {
         }
     }
     console.log('******************************')
+
 
 })
 

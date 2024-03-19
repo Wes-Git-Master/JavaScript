@@ -768,18 +768,16 @@ document.body.onload = function () {
 let start = 10;
 let step = 10;
 let limit = start + step;
-
 function eventAndAction(domElement, evenType, action) {
     domElement.addEventListener(evenType, action)
 }
-
 eventAndAction(document.getElementById('next'), 'click', function () {
     for (let i = start; i < limit; i++) {
         if (i < locations.length) {
             console.log(locations[i])
-        } else {
-            this.disabled = true;
+        }else {
             console.log('end')
+            break;
         }
     }
     start = limit
@@ -790,15 +788,14 @@ eventAndAction(document.getElementById('next'), 'click', function () {
 eventAndAction(document.getElementById('prev'), 'click', function () {
     start = start - 10
     limit = start + step;
+
     for (let i = start; i < limit; i++) {
         if (i < locations.length) {
             console.log(locations[i])
         }
     }
-    console.log('******************************')
-
-
-})
+    console.log(' *************   end   *************')
+});
 
 // ==========================
 

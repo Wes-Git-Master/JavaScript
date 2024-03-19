@@ -770,16 +770,17 @@ function eventAndAction(domElement, evenType, action) {
 }
 
 eventAndAction(document.getElementById('next'), 'click', function () {
-
     for (let i = start; i < limit; i++) {
         if (i < locations.length) {
             console.log(locations[i])
+        } else {
+            this.disabled = true;
+            console.log('end')
         }
     }
     start = limit
     limit = limit + step
     console.log('******************************')
-
 })
 
 eventAndAction(document.getElementById('prev'), 'click', function () {
@@ -791,6 +792,7 @@ eventAndAction(document.getElementById('prev'), 'click', function () {
         }
     }
     console.log('******************************')
+
 })
 
 

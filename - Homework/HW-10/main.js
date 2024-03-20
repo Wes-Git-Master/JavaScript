@@ -17,19 +17,29 @@ form.onsubmit = function (e) {
     }
     console.log(obj)
     let div = document.createElement('div');
+
+    div.style.marginTop = '10px'
+    div.style.width = '150px'
+
+
     let pName = document.createElement('p');
     pName.innerHTML = 'name - ' + `${obj.name}`
+    pName.style.margin = '2px'
     let pSurname = document.createElement('p');
     pSurname.innerHTML = 'surname - ' + `${obj.surname}`
+    pSurname.style.margin = '2px'
     let pAge = document.createElement('p');
     pAge.innerHTML = 'age - ' + `${obj.age}`
+    pAge.style.margin = '2px'
     div.append(pName, pSurname, pAge)
-    document.body.append(div)
+    document.body.appendChild(div)
     document.getElementById('name').value = ''
     document.getElementById('surname').value = ''
     document.getElementById('age').value = ''
-
 };
+
+
+
 
 // =============================================================================================
 
@@ -893,9 +903,57 @@ eventAndAction(buttonElement2, 'click', function () {
 //     з відповідним вмістом.
 // (Додатковачастина для завдання)
 
-
-
-
+let formElement1 = document.createElement('form');
+formElement1.style.display = 'flex'
+formElement1.style.flexDirection = 'column'
+formElement1.style.marginTop = '10px'
+formElement1.style.border = '3px dotted red'
+formElement1.style.height = '160px'
+formElement1.style.width = '130px'
+/********************************************/
+let labelElement1 = document.createElement('label');
+labelElement1.htmlFor = 'Number of lines'
+labelElement1.innerHTML = 'Num of lines:'
+labelElement1.style.marginBottom = '4px'
+labelElement1.style.margin = '8px 0 0 10px'
+let inputElement1 = document.createElement('input');
+inputElement1.type = 'number'
+inputElement1.name = 'Number of lines'
+inputElement1.style.width = '100px'
+inputElement1.style.margin = '0 0 0 10px'
+/********************************************/
+let labelElement2 = document.createElement('label');
+labelElement2.htmlFor = 'Number of columns'
+labelElement2.innerHTML = 'Num of columns:'
+labelElement2.style.marginBottom = '4px'
+labelElement2.style.margin = '3px 0 0 10px'
+let inputElement2 = document.createElement('input');
+inputElement2.type = 'number'
+inputElement2.name = 'Number of columns'
+inputElement2.style.width = '100px'
+inputElement2.style.margin = '0 0 0 10px'
+/********************************************/
+let labelElement3 = document.createElement('label');
+labelElement3.htmlFor = 'Cell contents'
+labelElement3.innerHTML = 'Cell contents:'
+labelElement3.style.marginBottom = '4px'
+labelElement3.style.margin = '3px 0 0 10px'
+let inputElement3 = document.createElement('input');
+inputElement3.type = 'number'
+inputElement3.name = 'Cell contents'
+inputElement3.style.width = '100px'
+inputElement3.style.margin = '0 0 0 10px'
+/********************************************/
+let buttonElement3 = document.createElement('button');
+buttonElement3.style.height = '20px'
+buttonElement3.style.width = '134px'
+buttonElement3.style.marginTop = '8px'
+buttonElement3.innerText = 'create'
+buttonElement3.style.borderRadius = '4vw'
+/********************************************/
+formElement1.append(labelElement1, inputElement1,labelElement2,inputElement2,labelElement3,inputElement3)
+document.body.append(formElement1,buttonElement3)
+console.log(document.body)
 
 
 

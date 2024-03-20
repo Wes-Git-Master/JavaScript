@@ -62,10 +62,10 @@ document.body.appendChild(border)
 // =============================================================================================
 
 // task 3 //
-// Є сторінка Simple pagination.html (назва довільна), при відвідуванні якої в локальне сховще,
+// Є сторінка (dataTimeStorage).html (назва довільна), при відвідуванні якої в локальне сховще,
 // В масив sessions зберігається інформація про дату та час відвідування сторінки.
 // Є ще сторінка (dataTimeDOM)sessions.html (назва довільна), при відвідуванні якої потрібно
-//  відмалювати всю інформацію про відвідування сторінки (hw.10)Simple pagination.html.
+//  відмалювати всю інформацію про відвідування сторінки (hw.10)html.
 // Інфу НЕ виводити в консоль, а побудувати дом структуру під кожну сессію
 
 let a = document.getElementsByTagName('a');
@@ -841,19 +841,36 @@ let formElement = document.createElement('form');
 formElement.style.display = 'flex'
 formElement.style.flexDirection = 'column'
 formElement.style.marginTop = '10px'
-
 let labelElement = document.createElement('label');
 labelElement.htmlFor = 'age2'
 labelElement.innerHTML = 'age:'
 labelElement.style.marginBottom = '4px'
-
 let inputElement = document.createElement('input');
 inputElement.type = 'number'
 inputElement.name = 'age2'
 inputElement.style.width = '75px'
 
+let buttonElement2 = document.createElement('button');
+buttonElement2.style.height = '20px'
+buttonElement2.style.width = '82px'
+buttonElement2.style.marginTop = '8px'
+buttonElement2.innerText = 'send'
+
 formElement.append(labelElement,inputElement)
-document.body.appendChild(formElement)
+document.body.append(formElement,buttonElement2)
+
+let inputValue =  inputElement.value
+
+eventAndAction(buttonElement2,'click',function () {
+               let inp = inputValue
+
+
+})
+
+
+
+
+
 
 
 

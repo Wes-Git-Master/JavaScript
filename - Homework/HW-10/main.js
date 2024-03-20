@@ -783,14 +783,16 @@ document.body.onload = function () {
 let start = 10;
 let step = 10;
 let limit = start + step;
+
 function eventAndAction(domElement, evenType, action) {
     domElement.addEventListener(evenType, action)
 }
+
 eventAndAction(document.getElementById('next'), 'click', function () {
     for (let i = start; i < limit; i++) {
         if (i < locations.length) {
             console.log(locations[i])
-        }else {
+        } else {
             console.log('end')
             break;
         }
@@ -826,7 +828,7 @@ ButtonElement.style.height = '25px'
 ButtonElement.style.width = '110px'
 ButtonElement.style.marginTop = '8px'
 document.body.appendChild(ButtonElement)
-eventAndAction(ButtonElement,'click',function () {
+eventAndAction(ButtonElement, 'click', function () {
     DivElement.style.display = 'none'
 })
 
@@ -843,12 +845,13 @@ formElement.style.flexDirection = 'column'
 formElement.style.marginTop = '10px'
 let labelElement = document.createElement('label');
 labelElement.htmlFor = 'age2'
-labelElement.innerHTML = 'age:'
+labelElement.innerHTML = 'age verification:'
 labelElement.style.marginBottom = '4px'
 let inputElement = document.createElement('input');
 inputElement.type = 'number'
 inputElement.name = 'age2'
 inputElement.style.width = '75px'
+
 
 let buttonElement2 = document.createElement('button');
 buttonElement2.style.height = '20px'
@@ -856,28 +859,29 @@ buttonElement2.style.width = '82px'
 buttonElement2.style.marginTop = '8px'
 buttonElement2.innerText = 'send'
 
-formElement.append(labelElement,inputElement)
-document.body.append(formElement,buttonElement2)
-
-let inputValue =  inputElement.value
-
-eventAndAction(buttonElement2,'click',function () {
-               let inp = inputValue
-
+formElement.append(labelElement, inputElement)
+document.body.append(formElement, buttonElement2)
+let session2 = JSON.parse(sessionStorage.getItem('number'));
+session2.push(inputElement.value)
+sessionStorage.setItem('age', JSON.stringify(session));
+let verificationValue = []
+eventAndAction(buttonElement2, 'click', function () {
+    verificationValue.push(inputElement.value)
+    if (!verificationValue[0]) {
+        console.log('Enter your age !!!')
+        alert('Enter your age !!!')
+    } else if (verificationValue[0] < 18 && verificationValue[0] >= 1) {
+        console.log('Not yet 18 years old !!!')
+        alert('Not yet 18 years old !!!')
+    }
+    if (verificationValue[0] >= 18) {
+        console.log('You can continue to check my homework :) ')
+        alert('You can continue to check my homework :) ')
+    }
+    verificationValue = []
+    inputElement.value = ''
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ==========================
 

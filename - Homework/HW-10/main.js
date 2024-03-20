@@ -870,11 +870,12 @@ eventAndAction(buttonElement2, 'click', function () {
     if (!verificationValue[0]) {
         console.log('Enter your age !!!')
         alert('Enter your age !!!')
-    } else if (verificationValue[0] < 18 && verificationValue[0] >= 1) {
+    }
+    else if (verificationValue[0] < 18 && verificationValue[0] > 0) {
         console.log('Not yet 18 years old !!!')
         alert('Not yet 18 years old !!!')
     }
-    if (verificationValue[0] >= 18) {
+    else if (verificationValue[0] >= 18) {
         console.log('You can continue to check my homework :) ')
         alert('You can continue to check my homework :) ')
     }

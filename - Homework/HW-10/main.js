@@ -39,8 +39,6 @@ form.onsubmit = function (e) {
 };
 
 
-
-
 // =============================================================================================
 
 // task 2 //
@@ -880,12 +878,10 @@ eventAndAction(buttonElement2, 'click', function () {
     if (!verificationValue[0]) {
         console.log('Enter your age !!!')
         alert('Enter your age !!!')
-    }
-    else if (verificationValue[0] < 18 && verificationValue[0] > 0) {
+    } else if (verificationValue[0] < 18 && verificationValue[0] > 0) {
         console.log('Not yet 18 years old !!!')
         alert('Not yet 18 years old !!!')
-    }
-    else if (verificationValue[0] >= 18) {
+    } else if (verificationValue[0] >= 18) {
         console.log('You can continue to check my homework :) ')
         alert('You can continue to check my homework :) ')
     }
@@ -939,7 +935,7 @@ labelElement3.innerHTML = 'Cell contents:'
 labelElement3.style.marginBottom = '4px'
 labelElement3.style.margin = '3px 0 0 10px'
 let inputElement3 = document.createElement('input');
-inputElement3.type = 'number'
+inputElement3.type = 'text'
 inputElement3.name = 'Cell contents'
 inputElement3.style.width = '100px'
 inputElement3.style.margin = '0 0 0 10px'
@@ -951,26 +947,32 @@ buttonElement3.style.marginTop = '8px'
 buttonElement3.innerText = 'create'
 buttonElement3.style.borderRadius = '4vw'
 /********************************************/
-formElement1.append(labelElement1, inputElement1,labelElement2,inputElement2,labelElement3,inputElement3)
-document.body.append(formElement1,buttonElement3)
+let tableContainer = document.createElement('div')
+/********************************************/
+formElement1.append(labelElement1, inputElement1, labelElement2, inputElement2, labelElement3, inputElement3)
+document.body.append(formElement1, buttonElement3)
 console.log(document.body)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+eventAndAction(buttonElement3, 'click', function () {
+    let rows = inputElement1.value
+    let columns = inputElement2.value
+    let content = inputElement3.value
+    let table = document.createElement("table");
+    table.style.border = '1px solid blue'
+    table.style.borderRadius = '2px'
+    table.style.marginTop = '8px'
+    for (let item = 0; item < rows; item++) {
+        let row = document.createElement("tr");
+        for (let item2 = 0; item2 < columns; item2++) {
+            let cell = document.createElement("td");
+            cell.textContent = content;
+            row.appendChild(cell);
+        }
+        table.appendChild(row);
+    }
+    tableContainer.innerHTML = '';
+    tableContainer.appendChild(table);
+    document.body.appendChild(table)
+})
 
 // ==========================
 

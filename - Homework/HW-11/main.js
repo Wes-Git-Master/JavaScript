@@ -2,28 +2,28 @@
 // - Взяти https://dummyjson.com/docs/carts та вивести інформацію про всі корзини.
 //   Відобразити всі поля кожної корзини.
 
-
-// discountPercentage:
-// discountedPrice:
-// id:
-// price:
-// quantity:
-// thumbnail: "https://cdn.dummyjson.com/product-images/59/thumbnail.jpg"
-// title:
-// total:
-
-
     let url = new URL('https://dummyjson.com/carts');
     fetch(url)
         .then(res => res.json()).then(value => {
-
         console.log(value.carts[0].products[0])
 
         for (const cart of value.carts) {
             for (const product of cart.products) {
 
-
                 let divCart = document.createElement('div');
+
+                // let discountPercentage = product.discountPercentage
+                // let discountPercentage = product.discountPercentage
+                // let discountPercentage = product.discountPercentage
+                // let discountPercentage = product.discountPercentage
+                // let discountPercentage = product.discountPercentage
+                // let discountPercentage = product.discountPercentage
+                // let discountPercentage = product.discountPercentage
+                // let discountPercentage = product.discountPercentage
+
+
+
+                // divCart.innerHTML = `${}`
 
 
 
@@ -38,7 +38,14 @@
 
     });
 
-
+// discountPercentage: 8.71
+// discountedPrice:
+// id:
+// price:
+// quantity:
+// thumbnail: "https://cdn.dummyjson.com/product-images/59/thumbnail.jpg"
+// title:
+// total:
 
 
 // ** task 2

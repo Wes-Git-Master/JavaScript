@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    fetch("https://api.spacexdata.com/v3/launches")
+        .then(response => response.json())
+        .then(xxx =>{
+
+            let results = xxx.filter(item => item.launch_year < '2009')
+            console.log(results)
+            for (const item of results) {
+                // console.log(item)
+                let div = document.createElement('div')
+                let img = document.createElement('img')
+
+
+                div.innerText = `${item.mission_name} - ${item.launch_year}`;
+                img.src = item.links.mission_patch_small
+                document.body.append(div, img);
+            }
+        })
+        // .catch(error => console.log('error', error));
+</script>
+</body>
+</html>

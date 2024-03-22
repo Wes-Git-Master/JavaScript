@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+<button id="do">do request</button>
+<div class="target"></div>
+
+
+<script>
+    function showQuotes(limit, skip) {
+        let url = new URL('https://dummyjson.com/quotes');
+        url.searchParams.append('limit', limit);
+        url.searchParams.append('skip', skip);
+
+        console.log(url.searchParams.get('limit'));
+
+        fetch(url) //json
+            .then(res => res.json()) // js
+            .then(value => {
+                let target = document.getElementsByClassName('target')[0];
+                target.innerHTML = '';
+
+                let ul = document.createElement('ul');
+                target.appendChild(ul);
+
+
+                let {quotes} = value;
+
+                for (const quote of quotes) {
+                    let li = document.createElement('li');
+                    let span = document.createElement('span');
+                    span.innerText = quote.id + ' ' + quote.author;
+                    let p = document.createElement('p');
+                    p.innerText = quote.quote;
+
+
+                    li.append(span, p);
+                    ul.appendChild(li);
+
+
+                }
+
+            });
+    };
+
+
+    let lim = 20;
+    let skp = 0;
+    document.getElementById('do').onclick = function () {
+        showQuotes(lim, skp);
+        skp += lim;
+    };
+
+
+</script>
+</body>
+</html>

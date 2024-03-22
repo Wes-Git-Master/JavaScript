@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PERSON</title>
+</head>
+<body>
+<h3><a href="index.html">PERSON</a></h3>
+<script>
+
+
+    console.log(location)
+    let userId = new URL(location.href).searchParams.get('xxxx')
+    console.log(userId);
+    let baseURL = 'https://rickandmortyapi.com/api/character/'+userId;
+
+    fetch(baseURL).then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            let father = document.createElement('div')
+            document.body.appendChild(father)
+            for (const resultKey in data) {
+                // console.log(resultKey, data[resultKey])
+                if(resultKey === 'image'){
+                    let img = document.createElement('img')
+                    father.appendChild(img)
+                    img.src = data[resultKey];
+                }else{
+                    if(resultKey === 'origin' || resultKey === 'location'){
+                        for (const key in data[resultKey]) {
+                           let p = document.createElement('p')
+                            father.appendChild(p)
+                            p.innerText = `${key} - ${data[resultKey][key]}`
+                        }
+                    }else{
+                        let div = document.createElement('div');
+                        father.appendChild(div)
+                        div.innerText = `${resultKey} - ${data[resultKey]}`
+                    }
+                }
+            }
+            
+        })
+
+</script>
+</body>
+</html>

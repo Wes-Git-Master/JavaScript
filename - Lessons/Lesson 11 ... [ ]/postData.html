@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            body: 'This makes all sense to me!',
+            postId: 3,
+            userId: 5,
+        })
+    };
+    fetch('https://dummyjson.com/comments/add', options)
+        .then(res => res.json())
+        .then(console.log);
+</script>
+</body>
+</html>

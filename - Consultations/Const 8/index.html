@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CONS #8 JS</title>
+    <style>
+ #characters{
+     display: flex;
+     flex-wrap: wrap;
+     gap:20px;
+     border: 2px solid red;
+     justify-content:center ;
+     align-items: center;
+ }
+
+ .element img{
+     width: 200px;
+     cursor: pointer;
+ }
+#group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+    </style>
+</head>
+<body>
+<div id="group">
+    <h1>Rick and Morty Characters</h1>
+    <div id="bntGroup">
+    <button id="prevBtn">PREV</button>
+    <button id="nextBnt" onclick="getCharacters(nextPage)">NEXT</button>
+    </div>
+</div>
+
+<div id="characters"></div>
+
+<script>
+    const URL = 'https://rickandmortyapi.com/api/character';
+    let nextPage = 0;
+    let prevPege = 0;
+        //запит
+    function getCharacters(url){
+        fetch(url).then(res=>res.json())
+            .then(data => {
+                // console.log(data)
+                console.log(data.info)
+                // console.log(data.results)
+                displayCh(data.results);
+                 prevPege = data.info.prev
+                 nextPage = data.info.next
+
+            })
+    }
+
+    getCharacters(URL)
+
+        // render Fn
+
+    function displayCh (persons) {
+        let container = document.getElementById('characters')
+        container.innerHTML = ''; // очищення
+
+        for (const person of persons) {
+            let div = document.createElement('div');
+            div.classList.add('element')
+
+            let h3 = document.createElement('h3');
+            let img = document.createElement('img');
+            img.src = person.image;
+            h3.innerText = `${person.id} - ${person.name}`;
+
+            img.addEventListener('click', ()=>{
+                location.href = 'person.html?xxxx='+ person.id;
+            })
+
+            div.append(h3, img);
+            container.appendChild(div)
+
+        }
+    }
+
+
+
+    document.getElementById('prevBtn').addEventListener('click',()=>{
+        getCharacters(prevPege)
+    })
+
+
+
+
+
+
+</script>
+</body>
+</html>

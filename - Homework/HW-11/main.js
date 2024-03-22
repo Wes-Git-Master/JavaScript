@@ -16,11 +16,10 @@
     let url = new URL('https://dummyjson.com/carts');
     fetch(url)
         .then(res => res.json()).then(value => {
+
         console.log(value.carts[0].products[0])
 
         for (const cart of value.carts) {
-           let divCart = document.createElement('div');
-
             for (const product of cart.products) {
 
 
@@ -28,12 +27,12 @@
 
 
 
-
+                document.body.appendChild(divCart)
             }
 
 
 
-            document.body.appendChild(divCart)
+
         }
 
 

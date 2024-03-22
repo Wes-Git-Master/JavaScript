@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+Є сторінка hw3.html (назва довільна), при відвідуванні якої в локальне сховще, в масив sessions зберігається інформація
+про дату та час відвідування сторінки.
+Є ще сторінка sessions.html (назва довільна), при відвідуванні якої потрібно відмалювати всю інформацію про відвідування
+сторінки index.html. Інфу НЕ виводити в консоль, а побудувати дом структуру під кожну сессію
+=========================
+<script>
+    function saveVisit() {
+        let arrayOfSessions = JSON.parse(localStorage.getItem('sessions')) || [];
+
+        let date = new Date();
+        arrayOfSessions.push({
+            day: date.getDate(),
+            hour: date.getHours(),
+            minutes: date.getMinutes(),
+            seconds: date.getSeconds()
+        });
+
+        localStorage.setItem('sessions', JSON.stringify(arrayOfSessions));
+
+
+    }
+
+    saveVisit();
+
+</script>
+</body>
+</html>

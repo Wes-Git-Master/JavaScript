@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+"останнє завдання з домашки(при перезавантаженні сторінки до значаення додається по 10грн, але !!!
+зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.) як саме
+встановити цей проміжок часу?"
+<script>
+
+    function saveVisit() {
+        let arrayOfSessions = JSON.parse(localStorage.getItem('sessions')) || [];
+
+        let date = new Date();
+        let price = 100;
+
+        let now = date.getTime();
+        let lastSaved = arrayOfSessions[arrayOfSessions.length - 1]?.milis
+        console.log(now, lastSaved);
+        if (now - lastSaved > 1000 * 10 || arrayOfSessions.length === 0) {
+            price = price + 10;
+            arrayOfSessions.push({
+                day: date.getDate(),
+                hour: date.getHours(),
+                minutes: date.getMinutes(),
+                seconds: date.getSeconds(),
+                price: price,
+                milis: date.getTime()
+
+            });
+        }
+
+        localStorage.setItem('sessions', JSON.stringify(arrayOfSessions));
+
+
+    }
+
+    saveVisit();
+</script>
+</body>
+</html>

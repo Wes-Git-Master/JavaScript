@@ -1,41 +1,63 @@
-=======================================================================================
+ ==============================================================================================
 
  A standard JS construct for retrieving data from an API ...
-                  ----------------------------------------------
-                             Example:
-                  fetch( 'url' )
-                      .then(res => res.json())
-                      .then(value => ! ACTION ! )
-                  ----------------------------------------------
 
- =======================================================================================
+            ----------------------------------------------
+                       Example:
+            fetch( 'url' )
+                .then(res => res.json())
+                .then(value => ! ACTION ! )
+            ----------------------------------------------
+
+ ==============================================================================================
 
  If, according to the documentation, the API allows certain actions & changes ...
  - The URL address can be made a template string.
  - Change the link parameters (qwery params) || output to variables.
-                  ----------------------------------------------
-                             Example:
-                  let param1 = x
-                  let param2 = y
-                  fetch( `url/param1=${param1}param2=${param2}`)
-                      .then(res => res.json())
-                      .then(value => ! ACTION ! )
-                  ----------------------------------------------
 
- =======================================================================================
+            ----------------------------------------------
+                       Example:
+            let param1 = x
+            let param2 = y
+            fetch( `url/param1=${param1}param2=${param2}`)
+                .then(res => res.json())
+                .then(value => ! ACTION ! )
+            ----------------------------------------------
+
+ - HTTP method POST.
+
+            ------------------------------------------------------------------------------
+                       Example:
+            let options = {
+                    method: 'POST',                   ... HTTP method ...
+                    headers: { 'Content-Type':
+                     'application/json' },            ... the type of data to transfer ...
+                    body: JSON.stringify({            ... what needs to be conveyed ...
+                        body: 'This makes all sense to me!',
+                        postId: 3,
+                        userId: 5,
+                    })
+            };
+                   fetch('https://dummyjson.com/comments/add', options)
+                        .then(res => res.json())
+                        .then(console.log);
+            ------------------------------------------------------------------------------
+
+ ==============================================================================================
 
  In general, this standard JS construction for receiving data from the API
  should be applied to some event (for example => "window.onload") ...
-                  ----------------------------------------------
-                             Example:
-                  window.onload = function () = {
-                         let param1 = x
-                         let param2 = y
-                         fetch( `url/param1=${param1}param2=${param2}`)
-                             .then(res => res.json())
-                             .then(value => ! ACTION ! )
-                  }
-                  ----------------------------------------------
 
- =======================================================================================
+            -----------------------------------------------------
+                       Example:
+            window.onload = function () = {
+                   let param1 = x
+                   let param2 = y
+                   fetch( `url/param1=${param1}param2=${param2}`)
+                       .then(res => res.json())
+                       .then(value => ! ACTION ! )
+            }
+            -----------------------------------------------------
+
+ ==============================================================================================
 

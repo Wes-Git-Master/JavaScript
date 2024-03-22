@@ -4,7 +4,8 @@
 
 
     let url = new URL('https://dummyjson.com/quotes');
-    fetch(url).then(res => res.json()).then(value => {
+    fetch(url)
+        .then(res => res.json()).then(value => {
         console.log(value)
 
 

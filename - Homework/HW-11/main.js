@@ -2,9 +2,18 @@
 // - Взяти https://dummyjson.com/docs/carts та вивести інформацію про всі корзини.
 //   Відобразити всі поля кожної корзини.
 
-fetch('https://dummyjson.com/carts')
-    .then(res => res.json())
-    .then(console.log);
+
+    let url = new URL('https://dummyjson.com/quotes');
+    fetch(url).then(res => res.json()).then(value => {
+        console.log(value)
+
+
+
+
+    });
+
+
+
 
 // ** task 2
 // - Взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти.

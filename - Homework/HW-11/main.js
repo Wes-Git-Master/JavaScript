@@ -3,12 +3,38 @@
 //   Відобразити всі поля кожної корзини.
 
 
-    let url = new URL('https://dummyjson.com/quotes');
+// discountPercentage:
+// discountedPrice:
+// id:
+// price:
+// quantity:
+// thumbnail: "https://cdn.dummyjson.com/product-images/59/thumbnail.jpg"
+// title:
+// total:
+
+
+    let url = new URL('https://dummyjson.com/carts');
     fetch(url)
         .then(res => res.json()).then(value => {
-        console.log(value)
+        console.log(value.carts[0].products[0])
+
+        for (const cart of value.carts) {
+           let divCart = document.createElement('div');
+
+            for (const product of cart.products) {
 
 
+                let divCart = document.createElement('div');
+
+
+
+
+            }
+
+
+
+            document.body.appendChild(divCart)
+        }
 
 
     });

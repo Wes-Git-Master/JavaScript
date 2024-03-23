@@ -2,50 +2,41 @@
 // - Взяти https://dummyjson.com/docs/carts та вивести інформацію про всі корзини.
 //   Відобразити всі поля кожної корзини.
 
-    let url = new URL('https://dummyjson.com/carts');
-    fetch(url)
-        .then(res => res.json()).then(value => {
-        console.log(value.carts[0].products[0])
+let url = new URL('https://dummyjson.com/carts');
 
-        for (const cart of value.carts) {
-            for (const product of cart.products) {
-
-                let divCart = document.createElement('div');
-
-                // let discountPercentage = product.discountPercentage
-                // let discountPercentage = product.discountPercentage
-                // let discountPercentage = product.discountPercentage
-                // let discountPercentage = product.discountPercentage
-                // let discountPercentage = product.discountPercentage
-                // let discountPercentage = product.discountPercentage
-                // let discountPercentage = product.discountPercentage
-                // let discountPercentage = product.discountPercentage
-
-
-
-                // divCart.innerHTML = `${}`
-
-
-
-                document.body.appendChild(divCart)
-            }
-
-
-
-
+fetch(url)
+    .then(res => res.json()).then(value => {
+    console.log(value.carts[0].products[0])
+    let products = document.createElement('div')
+    for (const cart of value.carts) {
+        for (const product of cart.products) {
+            let divCart = document.createElement('div');
+            // divCart.classList.add('divCart')
+            let image = document.createElement('img')
+            image.src = `${product.thumbnail}`
+            image.classList.add('image')
+            let title = document.createElement('p')
+            title.innerHTML = product.title
+            let price = document.createElement('p')
+            price.innerHTML = 'price - ' + product.price
+            let total = document.createElement('p')
+            total.innerHTML = 'total - ' + product.total
+            let discountPercentage = document.createElement('p')
+            discountPercentage.innerHTML = 'discountPercentage - ' + product.discountPercentage
+            let discountedPrice = document.createElement('p')
+            discountedPrice.innerHTML = 'discountedPrice - ' + product.discountedPrice
+            let id = document.createElement('p')
+            id.innerText = 'id - ' + product.id
+            let quantity = document.createElement('p')
+            quantity.innerHTML = 'quantity - ' + product.quantity
+            divCart.append(image, title, price, total, discountPercentage, discountedPrice, id, quantity)
+            products.appendChild(divCart)
         }
+        document.body.appendChild(products)
 
+    }
+})
 
-    });
-
-// discountPercentage: 8.71
-// discountedPrice:
-// id:
-// price:
-// quantity:
-// thumbnail: "https://cdn.dummyjson.com/product-images/59/thumbnail.jpg"
-// title:
-// total:
 
 
 // ** task 2

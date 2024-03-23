@@ -172,6 +172,14 @@ joinTask(button3, 'click', function () {
     let url = new URL('http://jsonplaceholder.typicode.com/users');
     fetch(url)
         .then(res => res.json()).then(value => {
+        console.log(value)
+
+
+
+
+
+
+
 
 
 
@@ -198,6 +206,7 @@ joinTask(button3, 'click', function () {
 
     function enableButton() {
         button2.disabled = false;
+        button1.disabled = false
     }
 
     enableButton()

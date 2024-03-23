@@ -19,12 +19,10 @@ joinTask(button1,'click',function () {
     let url = new URL('https://dummyjson.com/carts');
     fetch(url)
         .then(res => res.json()).then(value => {
-        console.log(value.carts[0].products[0])
         let products = document.createElement('div')
         for (const cart of value.carts) {
             for (const product of cart.products) {
                 let divCart = document.createElement('div');
-                // divCart.classList.add('divCart')
                 let image = document.createElement('img')
                 image.src = `${product.thumbnail}`
                 image.classList.add('image')
@@ -75,46 +73,63 @@ joinTask(button1,'click',function () {
 
 joinTask(button2,'click',function () {
 
-    let url = new URL('https://dummyjson.com/carts');
+    let url = new URL('https://dummyjson.com/recipes');
     fetch(url)
         .then(res => res.json()).then(value => {
-        console.log(value.carts[0].products[0])
-        let products = document.createElement('div')
+        console.log(value.recipes[0])
 
-        //********************************************//
-        function removeElements() {
-            let body = document.body;
-            while (body.firstChild) {
-                body.removeChild(body.firstChild);
+        let recipes = document.createElement('div')
+        for (const recipe of value.recipes) {
+            for (let i = 0; i < 1; i++) {
+
+                let recipeBlock = document.createElement('div');
+                let image = document.createElement('img')
+                image.src = `${recipe.image}`
+                image.classList.add('image2')
+                // let title = document.createElement('p')
+                // title.innerHTML = product.title
+                // let price = document.createElement('p')
+                // price.innerHTML = 'price - ' + product.price
+                // let total = document.createElement('p')
+                // total.innerHTML = 'total - ' + product.total
+                // let discountPercentage = document.createElement('p')
+                // discountPercentage.innerHTML = 'discountPercentage - ' + product.discountPercentage
+                // let discountedPrice = document.createElement('p')
+                // discountedPrice.innerHTML = 'discountedPrice - ' + product.discountedPrice
+                // let id = document.createElement('p')
+                // id.innerText = 'id - ' + product.id
+                // let quantity = document.createElement('p')
+                // quantity.innerHTML = 'quantity - ' + product.quantity
+                recipeBlock.appendChild(image)
+                recipes.appendChild(recipeBlock)
+
             }
-        }
-        removeElements()
+            //********************************************//
+            function removeElements() {
+                let body = document.body;
+                while (body.firstChild) {
+                    body.removeChild(body.firstChild);
+                }
+            }
 
-        document.body.append(button1,button2,button3)
+            removeElements()
 
-        function disableButton() {
-            button2.disabled = true;
+            document.body.append(button1, button2, button3,recipes)
+
+            function disableButton() {
+                button2.disabled = true;
+            }
+
+            disableButton()
+
+            function enableButton() {
+                button1.disabled = false;
+            }
+
+            enableButton()
+            //********************************************//
         }
-        disableButton()
-        function enableButton() {
-            button1.disabled = false;
-        }
-        enableButton()
-        //********************************************//
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
 })
 
 // ** task 3

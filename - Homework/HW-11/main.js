@@ -43,32 +43,32 @@ joinTask(button1, 'click', function () {
                 divCart.append(image, title, price, total, discountPercentage, discountedPrice, id, quantity)
                 products.appendChild(divCart)
             }
-
-            function removeElements() {
-                let body = document.body;
-                while (body.firstChild) {
-                    body.removeChild(body.firstChild);
-                }
-            }
-
-            removeElements()
-
-            document.body.append(button1, button2, button3, products)
-
-            function disableButton() {
-                button1.disabled = true;
-            }
-
-            disableButton()
-
-            function enableButton() {
-                button2.disabled = false;
-                button3.disabled = false
-            }
-
-            enableButton()
-
         }
+        //********************************************//
+        function removeElements() {
+            let body = document.body;
+            while (body.firstChild) {
+                body.removeChild(body.firstChild);
+            }
+        }
+
+        removeElements()
+
+        document.body.append(button1, button2, button3, products)
+
+        function disableButton() {
+            button1.disabled = true;
+        }
+
+        disableButton()
+
+        function enableButton() {
+            button2.disabled = false;
+            button3.disabled = false
+        }
+
+        enableButton()
+        //********************************************//
     })
 
 })
@@ -126,40 +126,41 @@ joinTask(button2, 'click', function () {
                 recipes.appendChild(recipeBox)
                 page.append(button1, button2, button3, recipes)
             }
-
-            //********************************************//
-            function removeElements() {
-                let body = document.body;
-                while (body.firstChild) {
-                    body.removeChild(body.firstChild);
-                }
-            }
-
-            removeElements()
-            document.body.append(button1, button2, button3, page)
-
-            function disableButton() {
-                button2.disabled = true;
-            }
-
-            disableButton()
-
-            function enableButton() {
-                button1.disabled = false;
-                button3.disabled = false
-            }
-
-            enableButton()
-            //********************************************//
         }
+        //********************************************//
+        function removeElements() {
+            let body = document.body;
+            while (body.firstChild) {
+                body.removeChild(body.firstChild);
+            }
+        }
+
+        removeElements()
+        document.body.append(button1, button2, button3, page)
+
+        function disableButton() {
+            button2.disabled = true;
+        }
+
+        disableButton()
+
+        function enableButton() {
+            button1.disabled = false;
+            button3.disabled = false
+        }
+
+        enableButton()
+        //********************************************//
     })
 })
 
 // ** task 3
 // - зробити файл users.html
+
 //   з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
 //   вивести їх id + name списком та додати посилання з
 //   href = user-details.html?id=XXX (замість ХХХ - айді юзера)
+
 //   при кліку на посилання перехід на відповідну сторінку,
 //   на якій буде вся інформація про користувача (всі 15 полів)
 //   отримана через додатковий запит
@@ -168,15 +169,13 @@ joinTask(button2, 'click', function () {
 
 joinTask(button3, 'click', function () {
 
+    let url = new URL('http://jsonplaceholder.typicode.com/users');
+    fetch(url)
+        .then(res => res.json()).then(value => {
 
 
 
-
-
-
-
-
-
+    })
 
 
 

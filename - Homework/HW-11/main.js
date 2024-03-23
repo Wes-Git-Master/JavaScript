@@ -63,6 +63,7 @@ joinTask(button1, 'click', function () {
 
             function enableButton() {
                 button2.disabled = false;
+                button3.disabled = false
             }
 
             enableButton()
@@ -145,6 +146,7 @@ joinTask(button2, 'click', function () {
 
             function enableButton() {
                 button1.disabled = false;
+                button3.disabled = false
             }
 
             enableButton()
@@ -166,6 +168,41 @@ joinTask(button2, 'click', function () {
 
 joinTask(button3, 'click', function () {
 
+
+
+
+
+
+
+
+
+
+
+
+
+    //********************************************//
+    function removeElements() {
+        let body = document.body;
+        while (body.firstChild) {
+            body.removeChild(body.firstChild);
+        }
+    }
+
+    removeElements()
+    document.body.append(button1, button2, button3)
+
+    function disableButton() {
+        button3.disabled = true;
+    }
+
+    disableButton()
+
+    function enableButton() {
+        button2.disabled = false;
+    }
+
+    enableButton()
+    //********************************************//
 
 })
 

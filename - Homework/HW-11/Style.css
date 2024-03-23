@@ -9,7 +9,41 @@
     margin-bottom: 8px;
 }
 /***********************************/
+.name {
+    font-size: 30px;
+    font-family: "Grenze", serif;
+    font-weight: 500;
+    margin: 0 0 10px 8px;
+}
 .image2{
-    height: 255px;
+    height: 310px;
+    margin-left: 8px;
+    border-radius: 8px;
+}
+.imageAndIngredients{
+    display: flex;
+}
+.instructions{
+    margin: 20px 0 0 8px;
+    width: 40vw;
+}
+.instructionsP{
+    font-size: 20px;
+    margin: 0 0 0 4px;
+    font-family: "Grenze", serif;
+    font-weight: 390;
+}
+.ingredients-ul{
+    margin: 12px 0 0 0;
+}
+.ingredients-li{
 
+    margin: 5px 0 0 0 ;
+}
+.page{
+    background-color: #e3e3e3;
+    border: 5px solid #547789;
+    border-radius: 2px;
+    margin-top: 4px;
+    padding-bottom: 25px;
 }

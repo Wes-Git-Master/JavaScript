@@ -4,10 +4,13 @@ function joinTask(domElement, evenType, action) {
 
 let button1 = document.createElement('button')
 button1.innerHTML = 'task 1'
+button1.style.marginLeft = ' 4px'
 let button2 = document.createElement('button')
 button2.innerHTML = 'task 2'
+button2.style.marginLeft = ' 4px'
 let button3 = document.createElement('button')
 button3.innerHTML = 'task 3'
+button3.style.marginLeft = ' 4px'
 document.body.append(button1, button2, button3)
 
 // ** task 1
@@ -158,11 +161,9 @@ joinTask(button2, 'click', function () {
 
 // ** task 3
 // - зробити файл users.html
-
 //   з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
 //   вивести їх id + name списком та додати посилання з
 //   href = user-details.html?id=XXX (замість ХХХ - айді юзера)
-
 //   при кліку на посилання перехід на відповідну сторінку,
 //   на якій буде вся інформація про користувача (всі 15 полів)
 //   отримана через додатковий запит

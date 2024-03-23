@@ -44,6 +44,7 @@ joinTask(button1, 'click', function () {
                 products.appendChild(divCart)
             }
         }
+
         //********************************************//
         function removeElements() {
             let body = document.body;
@@ -127,6 +128,7 @@ joinTask(button2, 'click', function () {
                 page.append(button1, button2, button3, recipes)
             }
         }
+
         //********************************************//
         function removeElements() {
             let body = document.body;
@@ -166,53 +168,137 @@ joinTask(button2, 'click', function () {
 //   отримана через додатковий запит
 //   (https://jsonplaceholder.typicode.com/users/XXX   де ХХХ - айді користувача)
 
-
 joinTask(button3, 'click', function () {
 
-    let url = new URL('http://jsonplaceholder.typicode.com/users');
+    let url = new URL('https://jsonplaceholder.typicode.com/users');
     fetch(url)
         .then(res => res.json()).then(value => {
-        console.log(value)
+        let ul = document.createElement('ul')
+        for (const users of value) {
+            let li = document.createElement('li')
+            li.innerHTML = `id - ${users.id}    name - ${users.name}`
+            let link = document.createElement('a')
+            let p = document.createElement('p')
+            p.innerHTML = 'user info'
+            link.href = '#'
+
+            function userInfo(domElement, evenType, action) {
+                domElement.addEventListener(evenType, action)
+            }
+
+            userInfo(link, 'click', function () {
+
+                function removeElements() {
+                    let body = document.body;
+                    while (body.firstChild) {
+                        body.removeChild(body.firstChild);
+                    }
+                }
+
+                removeElements()
+                document.body.append(button1, button2, button3)
+
+                function disableButton() {
+                    button3.disabled = false;
+                }
+
+                disableButton()
+
+                let userAddress = document.createElement('ul')
+                userAddress.innerHTML = 'Address :'
+                for (let i = 0; i < 1; i++) {
+                    const address = users.address;
+                    // console.log(address)
+
+                    let city = document.createElement('li')
+                    city.innerHTML = `city :  ${address.city}`
+                    let geoLat = document.createElement('li')
+                    geoLat.innerHTML = `geoLat : ${address.geo.lat}`
+                    let geoLng = document.createElement('li')
+                    geoLng.innerHTML = `geoLat : ${address.geo.lng}`
+                    let street = document.createElement('li')
+                    street.innerHTML = `street :  ${address.street}`
+                    let suite = document.createElement('li')
+                    suite.innerHTML = `suite :  ${address.suite}`
+                    let zipcode = document.createElement('li')
+                    zipcode.innerHTML = `zipcode :  ${address.zipcode}`
+                    userAddress.append(city, geoLat, geoLng, street, suite, zipcode)
+                }
+
+                let userCompany = document.createElement('ul')
+                userCompany.innerHTML = 'Company :'
+                for (let j = 0; j < 1; j++) {
+
+                    const company = users.company;
+                    let bs = document.createElement('li')
+                    bs.innerHTML = `bs :  ${company.bs}`
+                    let catchPhrase = document.createElement('li')
+                    catchPhrase.innerHTML = `catch-phrase : ${company.catchPhrase}`
+                    let nameOfCompany = document.createElement('li')
+                    nameOfCompany.innerHTML = `name : ${company.name}`
+
+                    userCompany.append(bs, catchPhrase, nameOfCompany)
+                }
+
+                let otherInfo = document.createElement('ul')
+                otherInfo.innerHTML = 'Other :'
+
+                for (let k = 0; k < 1; k++) {
+
+                    let userEmail = document.createElement('li')
+                    userEmail.innerHTML = `email :  ${users.email}`
+                    let userId = document.createElement('li')
+                    userId.innerHTML = `id :  ${users.id}`
+                    let name = document.createElement('li')
+                    name.innerHTML = `name :  ${users.name}`
+                    let userPhone = document.createElement('li')
+                    userPhone.innerHTML = `phone :  ${users.phone}`
+                    let userName = document.createElement('li')
+                    userName.innerHTML = `username :  ${users.username}`
+                    let webSite = document.createElement('li')
+                    webSite.innerHTML = `website :  ${users.website}`
 
 
+                    otherInfo.append(userEmail, userId, name, userPhone, userName, webSite)
+                }
 
+                document.body.append(userAddress, userCompany, otherInfo)
 
+            })
+            link.appendChild(p)
+            ul.append(li, link)
 
+            //********************************************//
+            function removeElements() {
+                let body = document.body;
+                while (body.firstChild) {
+                    body.removeChild(body.firstChild);
+                }
+            }
 
+            removeElements()
+            document.body.append(button1, button2, button3, ul)
 
+            function disableButton() {
+                button3.disabled = true;
+            }
 
+            disableButton()
 
+            function enableButton() {
+                button2.disabled = false;
+                button1.disabled = false
+            }
+
+            enableButton()
+            //********************************************//
+
+        }
 
     })
-
-
-
-    //********************************************//
-    function removeElements() {
-        let body = document.body;
-        while (body.firstChild) {
-            body.removeChild(body.firstChild);
-        }
-    }
-
-    removeElements()
-    document.body.append(button1, button2, button3)
-
-    function disableButton() {
-        button3.disabled = true;
-    }
-
-    disableButton()
-
-    function enableButton() {
-        button2.disabled = false;
-        button1.disabled = false
-    }
-
-    enableButton()
-    //********************************************//
-
 })
+
+
 
 
 

@@ -3,7 +3,6 @@
 //   Відобразити всі поля кожної корзини.
 
 let url = new URL('https://dummyjson.com/carts');
-
 fetch(url)
     .then(res => res.json()).then(value => {
     console.log(value.carts[0].products[0])
@@ -36,8 +35,6 @@ fetch(url)
 
     }
 })
-
-
 
 // ** task 2
 // - Взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти.

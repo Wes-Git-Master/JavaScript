@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let arr = [11, 22, 33, [44, ['a', 'b', 'c', [999, 998, 997]], 55], [66, 77, [111, 222]]];
+
+    let flat = []; // 11 22 33 44 55
+
+    function flatter(array) {
+        for (const item of array) {
+            if (Array.isArray(item)) {
+                flatter(item);
+            } else {
+                flat.push(item);
+            }
+        }
+    }
+
+    flatter(arr)
+    console.log(flat);
+
+</script>
+</body>
+</html>

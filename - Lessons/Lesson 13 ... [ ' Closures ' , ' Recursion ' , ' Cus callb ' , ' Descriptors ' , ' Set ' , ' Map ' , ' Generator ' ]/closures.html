@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // function bar() {
+    //
+    //     let x = 0;
+    //
+    //     return function () {
+    //         x++;
+    //         console.log(x);
+    //     };
+    //
+    // }
+    //
+    // let foo = bar();
+    // foo();
+    // foo();
+    // foo();
+
+
+    function userFactory(id, name) {
+        let user = {
+            id,
+            name
+        };
+        return {
+            totall: function () {
+                console.log(user);
+            },
+            getObj: function () {
+                return {
+                    name: user.name
+                };
+            },
+            setId: function (id) {
+                if (id > 0) {
+                    user.id = id;
+                }
+            },
+            getId: function () {
+                return user.id;
+            }
+        };
+    }
+
+    let kokos = userFactory(1, 'kokos');
+    console.log(kokos);
+    console.log(kokos.totall());
+    console.log(kokos.getObj());
+    kokos.setId(-1000);
+    console.log(kokos.totall());
+    console.log(kokos.getId());
+
+
+</script>
+</body>
+</html>

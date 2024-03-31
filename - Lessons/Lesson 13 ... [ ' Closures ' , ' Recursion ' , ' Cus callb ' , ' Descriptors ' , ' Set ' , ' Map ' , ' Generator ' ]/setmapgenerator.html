@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // let obj = {};
+    // let set = new Set();
+    // set.add('asd');
+    // set.add('asd');
+    // set.add('asd');
+    // set.add('qwe');
+    // set.add('qwe');
+    // set.add('qwe');
+    // set.add(123);
+    // set.add(123);
+    // set.add(123);
+    // set.add({});
+    // set.add({});
+    // set.add(obj);
+    // set.add(obj);
+    //
+    // console.log(set);
+    // let set1 = new Set([11, 22, 33, 44, 555, 555]);
+    // console.log(set1);
+    // console.log(set1.has(555));
+    // console.log(set1.size);
+    // set1.forEach(value => console.log(value));
+
+    let obj = {};
+    let map = new Map();
+    map.set('kokos', {
+        id: 1,
+        name: 'kokoridze'
+    });
+    map.set('abrikos1', {
+        id: 2,
+        name: 'asdjhqwtf'
+    });
+    map.set('abrikos2', {
+        id: 2,
+        name: 'asdjhqwtf'
+    });
+    map.set(obj, {
+        id: 3,
+        name: 'qwewqe'
+    });
+    // console.log(map);
+
+    // console.log(map.get('kokos'));
+    // let from = Array.from(map.keys());
+    // console.log(from);
+    // console.log(Array.from(map.values()));
+    // console.log(map.get(obj));
+
+    // let keysIter = map.keys(); // []
+    //
+    // console.log(keysIter.next());
+    // console.log(keysIter.next());
+    // console.log(keysIter.next());
+    // console.log(keysIter.next());
+
+    // function* foobar() {
+    //     yield 11;
+    //     yield 22;
+    //     yield 33;
+    // }
+    //
+    // let foobarGenerator = foobar();
+    // console.log(foobarGenerator.next());
+    // console.log(foobarGenerator.next());
+    // console.log(foobarGenerator.next());
+    // console.log(foobarGenerator.next());
+
+    function* nonFullLoop(arr) {
+        for (const arrElement of arr) {
+            yield arrElement
+        }
+    }
+
+
+    let generator = nonFullLoop([11, 22, 33, 44]);
+
+    console.log(generator.next());
+    console.log(generator.next());
+    console.log(generator.next());
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="data"></div>
+<div id="pagination">
+  <button id="prevBtn">Попередня</button>
+  <button id="nextBtn">Наступна</button>
+</div>
+
+<script>
+  const data = Array.from({ length: 100 }, (_, i) => i + 1);
+  const itemsPerPage = 10;
+  let currentPage = 1;
+
+  const renderData = () => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedData = data.slice(startIndex, endIndex);
+
+    const dataElement = document.getElementById('data');
+    dataElement.innerHTML = '';
+    paginatedData.forEach(item => {
+      const itemElement = document.createElement('div');
+      itemElement.textContent = item;
+      dataElement.appendChild(itemElement);
+    });
+  };
+
+  const renderPagination = () => {
+    const totalPages = Math.ceil(data.length / itemsPerPage);
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    prevBtn.disabled = currentPage === 1;
+    prevBtn.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderData();
+        renderPagination();
+      }
+    });
+
+    nextBtn.disabled = currentPage === totalPages;
+    nextBtn.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderData();
+        renderPagination();
+      }
+    });
+  };
+
+  renderData();
+  renderPagination();
+
+
+
+</script>
+</body>
+</html>

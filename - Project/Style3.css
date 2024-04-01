@@ -1,0 +1,152 @@
+/******************** postInfo ***********************/
+
+.body {
+    background-color: rgba(121, 121, 121, 0.16);
+}
+
+.postDetailDiv {
+    margin-left: 52px;
+    position: relative;
+}
+
+.bodyP {
+    display: flex;
+    align-items: center;
+    margin: 12px 0 0 0;
+    padding: 0 10px 0 10px;
+    font-size: 20px;
+    /*border: 4px rgba(192, 26, 26, 0.55) solid;*/
+    border-top: 5px rgba(192, 26, 26, 0.3) double;
+    border-right: 5px rgba(192, 26, 26, 0.3) double;
+    border-bottom: 4px rgba(25, 76, 185, 0.16) double;
+    border-left: 5px rgba(192, 26, 26, 0.3) double;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    height: 70px;
+    width: 1000px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0;
+    color: rgb(14, 44, 199);
+    padding: 0 10px 0 10px;
+    font-size: 18px;
+    border-top: 4px rgba(192, 26, 26, 0.24) double;
+    border-right: 5px rgba(192, 26, 26, 0.3) double;
+    border-bottom: 5px rgba(25, 76, 185, 0.16) double;
+    border-left: 5px rgba(192, 26, 26, 0.3) double;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    width: 1000px;
+    height: 35px;
+    font-family: "Lora", serif;
+    font-weight: 440;
+}
+
+.userId {
+    margin: 12px 0 0 0;
+    background-color: rgb(213, 174, 174);
+    height: 25px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 5px;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.32) 1px solid;
+}
+
+.id {
+    margin: 12px 0 0 0;
+    background-color: rgba(90, 192, 90, 0.44);
+    height: 25px;
+    width: 88px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 5px;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.32) 1px solid;
+}
+
+/******************** comments ***********************/
+
+.commentBlock {
+    display: flex;
+    margin: 15px 0 0 37px;
+    width: 1045px;
+}
+
+.commentDiv {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.82);
+    border: 4px solid rgba(0, 0, 0, 0.14);
+    border-radius: 15px;
+    margin-left: 15px;
+    padding: 0 8px 8px 0;
+    width: 225px;
+}
+
+.divBody {
+    /*background-color: rgba(159, 153, 153, 0.6);*/
+    margin: 4px 0 0 8px;
+}
+
+.commentBody {
+    margin: 0;
+}
+
+.commentInfoBlock {
+    /*background-color: rgba(162, 162, 162, 0.45);*/
+    margin: 16px 0 0 8px;
+    border-top: 4px double rgba(0, 0, 0, 0.32);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.nameAndEmailBlock {
+    /*background-color: rgba(107, 92, 92, 0.53);*/
+    margin: 0;
+}
+
+.commentName {
+    margin: 0;
+}
+
+.commentEmail {
+    margin: 4px 0 0 0;
+}
+
+.idBlock {
+    margin: 0;
+}
+
+.postId {
+    margin: 6px 0 0 0;
+    background-color: rgb(213, 174, 174);
+    height: 25px;
+    width: 88px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 5px;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.32) 1px solid;
+}
+
+.commentId {
+    margin: 6px 0 0 0;
+    background-color: rgba(90, 192, 90, 0.44);
+    height: 25px;
+    width: 121px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 5px;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.32) 1px solid;
+}
+
+

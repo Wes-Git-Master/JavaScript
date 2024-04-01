@@ -1,0 +1,81 @@
+/***********************   users   **************************/
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(121, 121, 121, 0.16);
+    margin-top: 3.5vh;
+
+}
+
+.userBlock {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    border-top: rgba(129, 129, 129, 0.24) groove 1px;
+    border-right: rgba(148, 148, 148, 0.16) groove 2px;
+    border-bottom: rgba(141, 141, 141, 0.22) groove 1px;
+    border-left: rgba(180, 180, 180, 0.16) groove 2px;
+    border-radius: 15px;
+    width: 728px;
+    height: 129px;
+
+}
+
+.userDiv {
+    background-color: #ffffff;
+    height: 108px;
+    width: 350px;
+    margin-left: 8px;
+    border: 1px solid #a29c9c;
+    border-radius: 8px;
+}
+
+.p1 {
+    margin: 10px 0 0 8px;
+    background-color: rgba(82, 189, 82, 0.45);
+    height: 25px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 5px;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.32) 1px solid;
+}
+
+.p2 {
+    margin: 4px 0 0 65px;
+    height: 25px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 5px;
+    font-size: 19px;
+}
+
+.button {
+    /*display: flex;*/
+    /*align-items: center;*/
+    height: 22px;
+    width: 47px;
+    margin: 8px 0 0 292px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.46);
+    border: 3px rgba(0, 0, 0, 0.41) double;
+    border-radius: 4px;
+    transition: background-color 0.1s ease-in;
+}
+
+.button:hover {
+    background-color: rgba(196, 196, 196, 0.34);
+}
+
+.button:active {
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
